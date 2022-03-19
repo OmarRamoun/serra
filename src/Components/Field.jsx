@@ -10,13 +10,13 @@ const Field = ({ type, ...props }) => {
           <Input id="email" type="email" title="E-Mail Adddress" {...props} /> :
 
         type === 'new-pass' ?
-          <Input id="new-password" type="password" title="Password" /> :
+          <Input id="newPassword" type="password" title="Password" {...props} /> :
 
         type === 'current-pass' ?
-          <Input id="current-password" type="password" title="Password" /> :
+          <Input id="currentPassword" type="password" title="Password" {...props} /> :
 
         type === 'confirm-pass' ?
-          <Input id="confirm-password" type="password" title="Confirm Password" /> :
+          <Input id="confirmPassword" type="password" title="Confirm Password" {...props} /> :
 
           <Input id="username" type="text" title="Username" {...props} />
       }
@@ -25,7 +25,7 @@ const Field = ({ type, ...props }) => {
 }
 
 Field.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
 }
 
 export default Field;

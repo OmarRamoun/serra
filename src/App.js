@@ -1,14 +1,16 @@
-import Header from './Components/Header';
-import Login from './Pages/Login';
-import Signup from './Pages/Signup';
-
+import Header from "./Components/Header";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import { FormContextProvider } from "./Contexts/FormContext";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Login />
-      <Signup />
+      <FormContextProvider>
+        <Login />
+        <Signup />
+      </FormContextProvider>
     </div>
   );
 }
