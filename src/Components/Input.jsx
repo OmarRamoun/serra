@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Input = ({ id, type, title, ...props }) => {
   return (
     <div>
@@ -18,6 +20,13 @@ const Input = ({ id, type, title, ...props }) => {
 Input.defaultProps = {
   focus: false,
   type: 'text',
+}
+
+Input.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  focus: PropTypes.bool,
 }
 
 export default Input;

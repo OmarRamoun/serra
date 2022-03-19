@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Input from './Input';
 
 
@@ -22,4 +23,9 @@ const Field = ({ type, ...props }) => {
     </>
   )
 }
+
+Field.propTypes = {
+  type: PropTypes.string.isRequired,
+}
+
 export default Field;

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const HelpLink = ({ text, linkText, link }) => {
   return (
     <p>
@@ -8,4 +10,11 @@ const HelpLink = ({ text, linkText, link }) => {
     </p>
   )
 }
+
+HelpLink.propTypes = {
+  text: PropTypes.string.isRequired,
+  linkText: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
+}
+
 export default HelpLink;
