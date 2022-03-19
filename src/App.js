@@ -1,7 +1,14 @@
+import Header from './Components/Header';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
+
+
 function App() {
   return (
     <div className="App">
-      Hello, Synergy of Serra 👋
+      <Header />
+      <Login />
+      <Signup />
     </div>
   );
 }
