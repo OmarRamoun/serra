@@ -1,16 +1,38 @@
+import Form from '../Components/Form';
 import Heading from '../Components/Heading';
 import Field from '../Components/Field';
 import CheckboxContainer from '../Components/CheckboxContainer';
 import HelpLink from '../Components/HelpLink';
+import { useContext } from 'react';
+import FormContext from '../Contexts/FormContext';
 
 const Signup = () => {
+
+  const { signupForm, handleSignupFormChange } = useContext(FormContext);
+
   return (
-    <form>
+    <Form>
       <Heading>signup</Heading>
-      <Field focus />
-      <Field type="email" />
-      <Field type="new-pass" />
-      <Field type="confirm-pass" />
+      <Field
+        autoFocus
+        value={signupForm.username}
+        onChange={handleSignupFormChange}
+      />
+      <Field
+        type="email"
+        value={signupForm.email}
+        onChange={handleSignupFormChange}
+      />
+      <Field
+        type="new-pass"
+        value={signupForm.newPassword}
+        onChange={handleSignupFormChange}
+      />
+      <Field
+        type="confirm-pass"
+        value={signupForm.confirmPassword}
+        onChange={handleSignupFormChange}
+      />
 
       <CheckboxContainer />
 
@@ -21,7 +43,7 @@ const Signup = () => {
         SIGNUP
       </button>
       <HelpLink text="Already Have an Account?" linkText="Login" link="#" />
-    </form>
+    </Form>
   )
 }
 
