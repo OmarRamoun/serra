@@ -1,6 +1,6 @@
-const Form = ({ children }) => {
+const Form = ({ children, ...props }) => {
   return (
-    <form action="#" method="POST">
+    <form {...props}>
       {children}
     </form>
   )
