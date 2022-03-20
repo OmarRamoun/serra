@@ -1,10 +1,25 @@
 import { useState, useEffect, createContext } from "react";
 import { USERNAME_REGEX, EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
+import { useForm } from '../Hooks/useForm';
+import { useAuth } from '../Hooks/useAuth';
+import axios from "../Api/axios";
 
 
 const FormContext = createContext({});
 
 export const FormContextProvider = ({ children }) => {
+
+  const REGISTER = '/signup';
+
+  // const [form, handleChange, resetForm] = useForm({
+  //     username: {
+  //         value: '',
+  //         validation: USERNAME_REGEX,
+  //         touched: false,
+  //         focus: false
+  //     },
+  //     email: {
+  //         value: '',
 
   const initialValue = {
     fieldValue: "",
@@ -110,7 +125,7 @@ export const FormContextProvider = ({ children }) => {
     handleFocusChange(event, setLoginForm, value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // if button enabled with JS hack
     const v1 = USERNAME_REGEX.test(signupForm.username.fieldValue);
@@ -119,7 +134,29 @@ export const FormContextProvider = ({ children }) => {
       setErrMsg("Invalid Entry");
       return;
     }
-    setSuccess(true);
+    try {
+      const { username, email, newPassword: password, newsLetter: newsletter } = signupForm;
+      const response = await axios.post(REGISTER,
+        JSON.stringify({ username, email, password, newsletter }),
+        {
+          headers: {
+            "Content-Type": "application/json"
+          },
+          withCredentials: true
+        }
+      );
+      console.log(response.data);
+      setSuccess(true);
+      // clear input fields
+    } catch (err) {
+      if (!err?.response) {
+        setErrMsg("Network Error");
+      } else if (err.response?.status === 409) {
+        setErrMsg('Username Taken');
+      } else {
+        setErrMsg('Registration Failed')
+      }
+    }
   }
 
   console.log(Object.entries(signupForm).map(([k, v]) => v.focus));
