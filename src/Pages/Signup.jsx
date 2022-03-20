@@ -3,12 +3,20 @@ import Heading from '../Components/Heading';
 import Field from '../Components/Field';
 import CheckboxContainer from '../Components/CheckboxContainer';
 import HelpLink from '../Components/HelpLink';
-import { useContext } from 'react';
+import { useContext, useEffect, createRef } from 'react';
 import FormContext from '../Contexts/FormContext';
+import { FaInfoCircle } from 'react-icons/fa';
 
 const Signup = () => {
 
-  const { signupForm, handleSignupFormChange } = useContext(FormContext);
+  const { success, errMsg, signupForm, handleSignupFormChange, handleSignupFormFocusChange, handleSubmit } = useContext(FormContext);
+
+  const usernameRef = createRef();
+  const emailRef = createRef();
+  const newPasswordRef = createRef();
+  const confirmPasswordRef = createRef();
+  const errorMsgRef = createRef();
+
 
   return (
     <Form>
