@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Header />
       <FormContextProvider>
-        <Login />
+        {/* <Login /> */}
         <Signup />
       </FormContextProvider>
     </div>
