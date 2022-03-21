@@ -7,6 +7,17 @@ import FormContext from '../Contexts/FormContext';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../features/user';
 import { EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
+import styled from 'styled-components';
+import {FlexCenter} from '../Styles/Flex.styles';
+
+const Container = styled.article`
+  ${FlexCenter}
+  flex: 1;
+`;
+
+const FormSection = styled.section`
+  min-width: 80%;
+`;
 
 
 const Login = () => {
@@ -18,16 +29,16 @@ const Login = () => {
   const emailRef = createRef();
   const passwordRef = createRef();
 
-  useEffect(() => {
-    // we can also useRef to set focus on email
-    console.log('Login.jsx rendered');
-    emailRef.current.focus();
-  }, []);
+  // useEffect(() => {
+  //   // we can also useRef to set focus on email
+  //   console.log('Login.jsx rendered');
+  //   // emailRef.current.focus();
+  // }, []);
 
-  useEffect(() => {
-    const result = EMAIL_REGEX.test(loginForm.email.fieldValue);
-    if (result) console.log("VAlid");
-  }, [loginForm.email.fieldValue]);
+  // useEffect(() => {
+  //   const result = EMAIL_REGEX.test(loginForm.email.fieldValue);
+  //   if (result) console.log("VAlid");
+  // }, [loginForm.email.fieldValue]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,8 +48,9 @@ const Login = () => {
       password: loginForm.currentPassword.fieldValue
     }));
   }
+
   return (
-    <>
+    <Container>
       {loginSuccess ? (
         <section>
           <h1>You are logged in!</h1>
@@ -55,21 +67,23 @@ const Login = () => {
       ) : (
         <Form onSubmit={handleSubmit}>
           <Heading>login</Heading>
-          <Field
-            type="email"
-            autoFocus
-            value={loginForm.email.fieldValue}
-            onChange={handleLoginFormChange}
-            ref={emailRef}
-            valid={loginForm.email.valid}
-            validate
-          />
-          <Field
-            type="current-pass"
-            value={loginForm.password}
-            onChange={handleLoginFormChange}
-            ref={passwordRef}
-          />
+          <FormSection>
+            <Field
+              type="email"
+              autoFocus
+              value={loginForm.email.fieldValue}
+              onChange={handleLoginFormChange}
+              ref={emailRef}
+              valid={loginForm.email.valid}
+              validate
+            />
+            <Field
+              type="current-pass"
+              value={loginForm.password}
+              onChange={handleLoginFormChange}
+              ref={passwordRef}
+            />
+          </FormSection>
           <button
             type="submit"
             aria-label="Log in"
@@ -80,7 +94,7 @@ const Login = () => {
           <HelpLink text="Don't Remember Your Password?" linkText="Recover My Password" link="#" />
         </Form>
       )}
-    </>
+    </Container>
   )
 }
 
