@@ -1,7 +1,17 @@
+import styled from 'styled-components';
+
+
+const StyledHeading = styled.h1`
+  font-family: 'Nova Flat', cursive, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+`;
 
 const Heading = ({ children }) => {
   return (
-    <h1>{children.toUpperCase()}</h1>
+    <StyledHeading>
+      {children.toUpperCase()}
+    </StyledHeading>
   )
 }
 
