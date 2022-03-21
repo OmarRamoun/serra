@@ -1,7 +1,7 @@
 import { useState, useEffect, createContext } from "react";
 import { USERNAME_REGEX, EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
-import { useForm } from '../Hooks/useForm';
-import { useAuth } from '../Hooks/useAuth';
+// import { useForm } from '../Hooks/useForm';
+// import { useAuth } from '../Hooks/useAuth';
 import axios from "../Api/axios";
 
 
@@ -42,7 +42,8 @@ export const FormContextProvider = ({ children }) => {
   });
 
   const [errMsg, setErrMsg] = useState("");
-  const [success, setSuccess] = useState(false);
+  const [loginSucess, setLoginSuccess] = useState(false);
+  const [signupSuccess, setSignupSuccess] = useState(false);
 
   useEffect(() => {
     const result = EMAIL_REGEX.test(signupForm.email.fieldValue);
@@ -146,7 +147,7 @@ export const FormContextProvider = ({ children }) => {
         }
       );
       console.log(response.data);
-      setSuccess(true);
+      setLoginSuccess(true);
       // clear input fields
     } catch (err) {
       if (!err?.response) {
@@ -163,7 +164,8 @@ export const FormContextProvider = ({ children }) => {
 
   return (
     <FormContext.Provider value={{
-      success,
+      loginSucess,
+      signupSuccess,
       errMsg,
       loginForm,
       signupForm,

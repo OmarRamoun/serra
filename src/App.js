@@ -8,8 +8,8 @@ function App() {
     <main className="App">
       <Header />
       <FormContextProvider>
-        <Login />
-        {/* <Signup /> */}
+        {/* <Login /> */}
+        <Signup />
       </FormContextProvider>
     </main>
   );

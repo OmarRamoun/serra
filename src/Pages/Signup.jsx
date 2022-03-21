@@ -6,10 +6,19 @@ import HelpLink from '../Components/HelpLink';
 import { useContext, useEffect, createRef } from 'react';
 import FormContext from '../Contexts/FormContext';
 import { FaInfoCircle } from 'react-icons/fa';
+// import ErrorBox from '../Components/ErrorBox';
+// import useField from '../Hooks/useField';
 
 const Signup = () => {
 
-  const { success, errMsg, signupForm, handleSignupFormChange, handleSignupFormFocusChange, handleSubmit } = useContext(FormContext);
+  const {
+    success,
+    errMsg,
+    signupForm,
+    handleSubmit
+  } = useContext(FormContext);
+
+  const { username, email, newPassword, confirmPassword } = signupForm;
 
   const usernameRef = createRef();
   const emailRef = createRef();
@@ -17,68 +26,41 @@ const Signup = () => {
   const confirmPasswordRef = createRef();
   const errorMsgRef = createRef();
 
+  const fieldProps = (fieldType, fieldKey) => ({
+    value: fieldType.fieldValue,
+    "aria-invalid": !fieldType.valid,
+    "aria-describedby": fieldKey + "-error-msg",
+    valid: fieldType.valid,
+    validate: true
+  });
+
+  const usernameFieldProps = fieldProps(username, "username");
+  const emailFieldProps = fieldProps(email, "email");
+  const passwordFieldProps = fieldProps(newPassword, "new-password");
+  const confirmPasswordFieldProps = fieldProps(confirmPassword, "confirm-password");
 
   return (
     <>
       {
-        success ? ( <h1>Success</h1> )
+        success ? (<h1>Success</h1>)
           : (
             <Form onSubmit={handleSubmit}>
-              <p
-                ref={errorMsgRef}
-                className={errMsg ? "err" : "offscreen"}
-                aria-live="assertive"
-              >
-                {errMsg}
-              </p>
+              {/* <ErrorBox /> */}
               <Heading>signup</Heading>
               <Field
+                ref={usernameRef}
                 autoFocus
-                value={signupForm.username.fieldValue}
-                onChange={handleSignupFormChange}
-                aria-invalid={!signupForm.username.valid}
-                aria-describedby="username-error-msg"
-                onFocus={(e) => handleSignupFormFocusChange(e, true)}
-                onBlur={(e) => handleSignupFormFocusChange(e, false)}
-                valid={signupForm.username.valid}
-              />
-              <p
-                id="username-error-msg"
-                className={!signupForm.username.fieldValue && !signupForm.username.valid && signupForm.username.focus ? "offscreen" : "err"}
-                aria-live="assertive"
-              >
-                {<FaInfoCircle />}
-                Username is required and must be between 3 and 20 characters.
-              </p>
-              <Field
-                type="email"
-                value={signupForm.email.fieldValue}
-                onChange={handleSignupFormChange}
-                aria-invalid={!signupForm.email.valid}
-                aria-describedby="email-error-msg"
-                onFocus={(e) => handleSignupFormFocusChange(e, true)}
-                onBlur={(e) => handleSignupFormFocusChange(e, false)}
-                valid={signupForm.email.valid}
+                {...usernameFieldProps}
               />
               <Field
                 type="new-pass"
-                value={signupForm.newPassword.fieldValue}
-                onChange={handleSignupFormChange}
-                aria-invalid={!signupForm.newPassword.valid}
-                aria-describedby="new-password-error-msg"
-                onFocus={(e) => handleSignupFormFocusChange(e, true)}
-                onBlur={(e) => handleSignupFormFocusChange(e, false)}
-                valid={signupForm.newPassword.valid}
+                ref={newPasswordRef}
+                {...passwordFieldProps}
               />
               <Field
                 type="confirm-pass"
-                value={signupForm.confirmPassword.fieldValue}
-                onChange={handleSignupFormChange}
-                aria-invalid={!signupForm.confirmPassword.valid}
-                aria-describedby="confirm-password-error-msg"
-                onFocus={(e) => handleSignupFormFocusChange(e, true)}
-                onBlur={(e) => handleSignupFormFocusChange(e, false)}
-                valid={signupForm.confirmPassword.valid}
+                ref={confirmPasswordRef}
+                {...confirmPasswordFieldProps}
               />
 
               <CheckboxContainer />

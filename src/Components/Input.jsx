@@ -1,23 +1,18 @@
 import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import { FaCheck, FaTimes } from 'react-icons/fa';
+import Label from './Label';
+import TextBox from './TextBox';
 
 
-const Input = forwardRef(({ id, type, title, valid, ...props }, ref) => {
+const Input = forwardRef((
+  { id, title, ...props }, ref) => {
+
   return (
     <div>
-      <label htmlFor={id}>
-        {title}
-        {valid && <FaCheck />}
-        {!valid && <FaTimes />}
-      </label>
-      <input
-        autoComplete={id}
+      <Label title={title} id={id} validate valid />
+      <TextBox
         id={id}
-        name={id}
-        type={type}
-        placeholder={title}
-        required
+        title={title}
         ref={ref}
         {...props}
       />
@@ -36,3 +31,16 @@ Input.propTypes = {
 }
 
 export default Input;
+
+/**
+ * input component
+ * |
+ * |- Label
+ * |- TextBox
+ * |  |
+ * |  |- Icon
+ * |  |- input
+ * |  |- ShowPass
+ * |
+ * |- ValidationNote
+ */

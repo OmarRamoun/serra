@@ -5,52 +5,62 @@ import Input from './Input';
 
 const Field = forwardRef(({ type, ...props }, ref) => {
 
-  let inputProps = {}
+  let inputProps = { ref: ref }
   switch (type) {
     case "email":
       inputProps = {
+        ...inputProps,
         type: "email",
         title: "E-Mail",
         id: "email",
-        ref: ref,
       }
       break;
     case "new-pass":
       inputProps = {
+        ...inputProps,
         type: "password",
         title: "Password",
         id: "newPassword",
-        ref: { ref },
       }
       break;
     case "current-pass":
       inputProps = {
+        ...inputProps,
         type: "password",
         title: "Password",
         id: "currentPassword",
-        ref: { ref },
       }
       break;
     case "confirm-pass":
       inputProps = {
+        ...inputProps,
         type: "password",
         title: "Confirm Password",
         id: "confirmPassword",
-        ref: { ref },
       }
       break;
     default:
       inputProps = {
+        ...inputProps,
         type: "text",
         title: "Username",
         id: "username",
-        ref: { ref },
       }
       break;
   }
 
   return (
-    <Input {...inputProps} {...props} />
+    <>
+      <Input {...inputProps} {...props} />
+      {/* <p
+        id="username-error-msg"
+        className={!username.fieldValue && !username.valid && username.focus ? "offscreen" : "err"}
+        aria-live="assertive"
+      >
+        {<FaInfoCircle />}
+        Username is required and must be between 3 and 20 characters.
+      </p> */}
+    </>
   )
 });
 
