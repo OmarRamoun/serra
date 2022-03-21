@@ -4,23 +4,62 @@ import Input from './Input';
 
 
 const Field = forwardRef(({ type, ...props }, ref) => {
+
+  let inputProps = { ref: ref }
+  switch (type) {
+    case "email":
+      inputProps = {
+        ...inputProps,
+        type: "email",
+        title: "E-Mail",
+        id: "email",
+      }
+      break;
+    case "new-pass":
+      inputProps = {
+        ...inputProps,
+        type: "password",
+        title: "Password",
+        id: "newPassword",
+      }
+      break;
+    case "current-pass":
+      inputProps = {
+        ...inputProps,
+        type: "password",
+        title: "Password",
+        id: "currentPassword",
+      }
+      break;
+    case "confirm-pass":
+      inputProps = {
+        ...inputProps,
+        type: "password",
+        title: "Confirm Password",
+        id: "confirmPassword",
+      }
+      break;
+    default:
+      inputProps = {
+        ...inputProps,
+        type: "text",
+        title: "Username",
+        id: "username",
+      }
+      break;
+  }
+
   return (
     <>
-      {
-        type === 'email' ?
-          <Input ref={ref} id="email" type="email" title="E-Mail Adddress" {...props} /> :
-
-        type === 'new-pass' ?
-          <Input ref={ref} id="newPassword" type="password" title="Password" {...props} /> :
-
-        type === 'current-pass' ?
-          <Input ref={ref} id="currentPassword" type="password" title="Password" {...props} /> :
-
-        type === 'confirm-pass' ?
-          <Input ref={ref} id="confirmPassword" type="password" title="Confirm Password" {...props} /> :
-
-          <Input ref={ref} id="username" type="text" title="Username" {...props} />
-      }
+      <Input {...inputProps} {...props} />
+      {/* <p
+        id="username-error-msg"
+        className={!username.fieldValue && !username.valid && username.focus ? "offscreen" : "err"}
+        aria-live="assertive"
+      >
+        {<FaInfoCircle />}
+        Username is required and must be between 3 and 20 characters.
+      </p> */}
     </>
   )
 });

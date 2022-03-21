@@ -5,13 +5,13 @@ import { FormContextProvider } from "./Contexts/FormContext";
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Header />
       <FormContextProvider>
         {/* <Login /> */}
         <Signup />
       </FormContextProvider>
-    </div>
+    </main>
   );
 }
 
