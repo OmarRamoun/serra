@@ -1,9 +1,18 @@
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+
+const StyledLabel = styled.label`
+  /* hiding the label from the view */
+  /* labels are meant only for screen readers */
+  position: fixed;
+  left: -9999px;
+`;
 
 const Label = ({ title, id, valid, validate }) => {
   return (
-    <label htmlFor={id}>
+    <StyledLabel htmlFor={id} >
       {title}
       {/* validate prop determins to validate (in case of signup) or not to validate (in case of login) */}
       {validate &&
@@ -12,7 +21,7 @@ const Label = ({ title, id, valid, validate }) => {
           {!valid && <FaTimes />}
         </>
       }
-    </label>
+    </StyledLabel>
   )
 };
 
