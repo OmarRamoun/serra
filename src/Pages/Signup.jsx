@@ -8,6 +8,18 @@ import FormContext from '../Contexts/FormContext';
 import { FaInfoCircle } from 'react-icons/fa';
 // import ErrorBox from '../Components/ErrorBox';
 // import useField from '../Hooks/useField';
+import { FlexCenter } from '../Styles/Flex.styles';
+import styled from 'styled-components';
+
+
+const Container = styled.article`
+  ${FlexCenter}
+  flex: 1;
+`;
+
+const FormSection = styled.section`
+  min-width: 80%;
+`;
 
 const Signup = () => {
 
@@ -40,28 +52,35 @@ const Signup = () => {
   const confirmPasswordFieldProps = fieldProps(confirmPassword, "confirm-password");
 
   return (
-    <>
+    <Container>
       {
         success ? (<h1>Success</h1>)
           : (
             <Form onSubmit={handleSubmit}>
               {/* <ErrorBox /> */}
               <Heading>signup</Heading>
-              <Field
-                ref={usernameRef}
-                autoFocus
-                {...usernameFieldProps}
-              />
-              <Field
-                type="new-pass"
-                ref={newPasswordRef}
-                {...passwordFieldProps}
-              />
-              <Field
-                type="confirm-pass"
-                ref={confirmPasswordRef}
-                {...confirmPasswordFieldProps}
-              />
+              <FormSection>
+                <Field
+                  ref={usernameRef}
+                  autoFocus
+                  {...usernameFieldProps}
+                />
+                <Field
+                  type="email"
+                  ref={emailRef}
+                  {...emailFieldProps}
+                />
+                <Field
+                  type="new-pass"
+                  ref={newPasswordRef}
+                  {...passwordFieldProps}
+                />
+                <Field
+                  type="confirm-pass"
+                  ref={confirmPasswordRef}
+                  {...confirmPasswordFieldProps}
+                />
+              </FormSection>
 
               <CheckboxContainer />
 
@@ -75,7 +94,7 @@ const Signup = () => {
             </Form>
           )
       }
-    </>
+    </Container>
   );
 };
 
