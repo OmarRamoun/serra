@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   height: 1.6rem;
   font-size: 1rem;
-  border-bottom: 1px solid rgb(125, 125, 140)
+  border-bottom: 1px solid rgb(125, 125, 140);
 `;
 
 const StyledInput = styled.input`
@@ -51,7 +51,7 @@ const TextBox = (
         name={id}
         type={type}
         placeholder={title}
-        ref={ref}
+        // ref={ref}
         onchange={validate ? handleSignupFormChange : handleLoginFormChange}
         onfocus={e => validate ? handleSignupFormFocusChange(e, true) : handleLoginFormFocusChange(e, true)}
         onBlur={e => validate ? handleSignupFormFocusChange(e, false) : handleLoginFormFocusChange(e, false)}
