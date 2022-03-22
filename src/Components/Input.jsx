@@ -1,15 +1,13 @@
-import { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 import Label from './Label';
 import TextBox from './TextBox';
-import ValidationNote from './ValidationNote';
+
+import PropTypes from 'prop-types';
 
 
-const Input = forwardRef((
-  { id, title, ...props }, ref) => {
+const Input = ({ id, title, ref, ...props }) => {
 
   return (
-    <div style={{width: "100%"}}>
+    <div style={{ width: "100%" }}>
       <Label title={title} id={id} validate valid />
       <TextBox
         id={id}
@@ -17,19 +15,14 @@ const Input = forwardRef((
         ref={ref}
         {...props}
       />
-      <ValidationNote />
     </div>
   )
-});
-
-Input.defaultProps = {
-  type: 'text',
-}
+};
 
 Input.propTypes = {
   id: PropTypes.string.isRequired,
-  type: PropTypes.string,
   title: PropTypes.string.isRequired,
+  ref: PropTypes.object,
 }
 
 export default Input;
@@ -44,5 +37,5 @@ export default Input;
  * |  |- input
  * |  |- ShowPass
  * |
- * |- ValidationNote
+ * ValidationNote
  */
