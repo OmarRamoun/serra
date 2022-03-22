@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ErrorBox = ({ errMsg }) => {
   return (
     <p
@@ -9,4 +11,9 @@ const ErrorBox = ({ errMsg }) => {
     </p>
   )
 }
-export default ErrorBox
+
+ErrorBox.propTypes = {
+  errMsg: PropTypes.string.isRequired
+}
+
+export default ErrorBox;
