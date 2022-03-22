@@ -25,4 +25,5 @@ const CheckboxContainer = () => {
     </section>
   )
 }
+
 export default CheckboxContainer;
