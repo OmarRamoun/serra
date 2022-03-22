@@ -1,14 +1,16 @@
-import Form from '../Components/Form';
+import SuccessSignup from './SuccessSignup';
+import Form from '../Components/Form.styles';
 import Heading from '../Components/Heading';
 import Field from '../Components/Field';
 import CheckboxContainer from '../Components/CheckboxContainer';
+import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
-import { useContext, useEffect, createRef } from 'react';
+import ErrorBox from '../Components/ErrorBox';
 import FormContext from '../Contexts/FormContext';
-import { FaInfoCircle } from 'react-icons/fa';
-// import ErrorBox from '../Components/ErrorBox';
-// import useField from '../Hooks/useField';
 import { FlexCenter } from '../Styles/Flex.styles';
+import { useContext, useEffect, createRef } from 'react';
+import { FaInfoCircle } from 'react-icons/fa';
+// import useField from '../Hooks/useField';
 import styled from 'styled-components';
 
 
@@ -38,27 +40,30 @@ const Signup = () => {
   const confirmPasswordRef = createRef();
   const errorMsgRef = createRef();
 
-  const fieldProps = (fieldType, fieldKey) => ({
-    value: fieldType.fieldValue,
-    "aria-invalid": !fieldType.valid,
-    "aria-describedby": fieldKey + "-error-msg",
-    valid: fieldType.valid,
-    validate: true
+  const getFieldProps = (field, fieldAriaText) => ({
+    validate: true,
+    value: field.fieldValue,
+    valid: field.valid,
+    focus: field.focus,
+    "aria-invalid": !field.valid,
+    "aria-describedby": fieldAriaText + "-error-msg",
+    ariaId: fieldAriaText + "-error-msg"
   });
 
-  const usernameFieldProps = fieldProps(username, "username");
-  const emailFieldProps = fieldProps(email, "email");
-  const passwordFieldProps = fieldProps(newPassword, "new-password");
-  const confirmPasswordFieldProps = fieldProps(confirmPassword, "confirm-password");
+  const usernameFieldProps = getFieldProps(username, "username");
+  const emailFieldProps = getFieldProps(email, "email");
+  const passwordFieldProps = getFieldProps(newPassword, "new-password");
+  const confirmPasswordFieldProps = getFieldProps(confirmPassword, "confirm-password");
 
   return (
     <Container>
       {
-        success ? (<h1>Success</h1>)
+        success ? (<SuccessSignup />)
           : (
             <Form onSubmit={handleSubmit}>
-              {/* <ErrorBox /> */}
+              {/* <ErrorBox errMsg={errMsg}/> */}
               <Heading>signup</Heading>
+
               <FormSection>
                 <Field
                   ref={usernameRef}
@@ -66,17 +71,17 @@ const Signup = () => {
                   {...usernameFieldProps}
                 />
                 <Field
-                  type="email"
+                  fieldType="email"
                   ref={emailRef}
                   {...emailFieldProps}
                 />
                 <Field
-                  type="new-pass"
+                  fieldType="new-pass"
                   ref={newPasswordRef}
                   {...passwordFieldProps}
                 />
                 <Field
-                  type="confirm-pass"
+                  fieldType="confirm-pass"
                   ref={confirmPasswordRef}
                   {...confirmPasswordFieldProps}
                 />
@@ -84,13 +89,18 @@ const Signup = () => {
 
               <CheckboxContainer />
 
-              <button
+              <Button
+                form={signupForm}
                 aria-label="Sign Up"
-                disabled={!signupForm.username.valid || !signupForm.email.valid || !signupForm.newPassword.valid || !signupForm.confirmPassword.valid}
               >
-                SIGNUP
-              </button>
-              <HelpLink text="Already Have an Account?" linkText="Login" link="#" />
+                Signup
+              </Button>
+
+              <HelpLink
+                text="Already Have an Account?"
+                linkText="Login"
+                link="#"
+              />
             </Form>
           )
       }
