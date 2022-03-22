@@ -1,5 +1,5 @@
 import Heading from '../Components/Heading';
-import Form from "../Components/Form";
+import Form from "../Components/Form.styles";
 import Field from "../Components/Field";
 import HelpLink from "../Components/HelpLink";
 import { useContext, useEffect, createRef } from 'react';
@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../features/user';
 import { EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
 import styled from 'styled-components';
-import {FlexCenter} from '../Styles/Flex.styles';
+import { FlexCenter } from '../Styles/Flex.styles';
 
 const Container = styled.article`
   ${FlexCenter}
@@ -90,8 +90,16 @@ const Login = () => {
           >
             LOGIN
           </button>
-          <HelpLink text="Don't have an account yet?" linkText="Sign up" link="#" />
-          <HelpLink text="Don't Remember Your Password?" linkText="Recover My Password" link="#" />
+          <HelpLink
+            text="Don't have an account yet?"
+            linkText="Sign up"
+            link="#"
+          />
+          <HelpLink
+            text="Don't Remember Your Password?"
+            linkText="Recover My Password"
+            link="#"
+          />
         </Form>
       )}
     </Container>
