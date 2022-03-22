@@ -25,6 +25,11 @@ const Label = ({ title, id, valid, validate }) => {
   )
 };
 
+Label.defaultProps = {
+  valid: false,
+  validate: false,
+}
+
 Label.proptTypes = {
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,

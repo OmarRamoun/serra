@@ -1,7 +1,8 @@
-import { useContext } from "react";
+import { useContext, forwardRef, useState } from "react";
 import FormContext from '../Contexts/FormContext';
 import Icon from './Icon';
-import ShowPass from './ShowPass';
+
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 
@@ -23,16 +24,16 @@ const StyledInput = styled.input`
   outline: none;
 `;
 
-const TextBox = (
-  {
+const TextBox = forwardRef(
+  ({
     id,
     type,
     title,
     valid,
     validate,
-    ref,
     ...props
-  }
+  },
+  ref
 ) => {
 
   const {
@@ -42,6 +43,8 @@ const TextBox = (
     handleLoginFormFocusChange
   } = useContext(FormContext);
 
+  const [showPass, setShowPass] = useState(false);
+
   return (
     <Container>
       <Icon type={type} />
@@ -49,17 +52,42 @@ const TextBox = (
         autoComplete={id}
         id={id}
         name={id}
-        type={type}
+        type={showPass ? "text" : type}
         placeholder={title}
-        // ref={ref}
-        onchange={validate ? handleSignupFormChange : handleLoginFormChange}
-        onfocus={e => validate ? handleSignupFormFocusChange(e, true) : handleLoginFormFocusChange(e, true)}
+        ref={ref}
+        onChange={validate ? handleSignupFormChange : handleLoginFormChange}
+        onFocus={e => validate ? handleSignupFormFocusChange(e, true) : handleLoginFormFocusChange(e, true)}
         onBlur={e => validate ? handleSignupFormFocusChange(e, false) : handleLoginFormFocusChange(e, false)}
         required
         {...props}
       />
-      {type === "password" && <Icon type="show" />}
+      {type === "password" &&
+        <Icon
+          type="show"
+          alt={showPass ? "Hide Password" : "Show Password"}
+          clickable
+          onClick={() => {
+            setShowPass(!showPass);
+          }}
+        />
+      }
     </Container>
   )
+});
+
+
+TextBox.propTypes = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  valid: PropTypes.bool,
+  validate: PropTypes.bool,
 }
+
+TextBox.defaultProps = {
+  type: 'text',
+  valid: false,
+  validate: false,
+}
+
 export default TextBox;

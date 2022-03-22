@@ -31,8 +31,8 @@ function App() {
     <Container>
       <Header />
       <FormContextProvider>
-        <Login />
-        {/* <Signup /> */}
+        {/* <Login /> */}
+        <Signup />
       </FormContextProvider>
       <GlobalStyles />
     </Container>
