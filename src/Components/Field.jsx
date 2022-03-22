@@ -1,17 +1,19 @@
-import { forwardRef } from 'react';
-import PropTypes from 'prop-types';
 import Input from './Input';
+import ValidationNote from './ValidationNote';
+import { forwardRef } from 'react';
+
+import PropTypes from 'prop-types';
 
 
-const Field = forwardRef(({ type, ...props }, ref) => {
+const Field = forwardRef(({ fieldType, ...props }, ref) => {
 
   let inputProps = { ref: ref }
-  switch (type) {
+  switch (fieldType) {
     case "email":
       inputProps = {
         ...inputProps,
         type: "email",
-        title: "E-Mail",
+        title: "E-Mail Address",
         id: "email",
       }
       break;
@@ -53,19 +55,28 @@ const Field = forwardRef(({ type, ...props }, ref) => {
     <>
       <Input {...inputProps} {...props} />
       {/* <p
-        id="username-error-msg"
-        className={!username.fieldValue && !username.valid && username.focus ? "offscreen" : "err"}
-        aria-live="assertive"
       >
-        {<FaInfoCircle />}
-        Username is required and must be between 3 and 20 characters.
+        
       </p> */}
+      {props.validate &&
+        <ValidationNote
+          fieldType={fieldType}
+          valid={props.valid}
+          ariaId={props.ariaId}
+          value={props.value}
+          focus={props.focus}
+        />
+      }
     </>
   )
 });
 
+Field.defaultProps = {
+  fieldType: "username",
+};
+
 Field.propTypes = {
-  type: PropTypes.string,
+  fieldType: PropTypes.string,
 }
 
 export default Field;
