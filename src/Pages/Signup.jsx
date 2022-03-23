@@ -67,23 +67,23 @@ const Signup = () => {
 
               <FormSection>
                 <Field
-                  reference={usernameRef}
+                  ref={usernameRef}
                   autoFocus
                   {...usernameFieldProps}
                 />
                 <Field
                   fieldType="email"
-                  reference={emailRef}
+                  ref={emailRef}
                   {...emailFieldProps}
                 />
                 <Field
                   fieldType="new-pass"
-                  reference={newPasswordRef}
+                  ref={newPasswordRef}
                   {...passwordFieldProps}
                 />
                 <Field
                   fieldType="confirm-pass"
-                  reference={confirmPasswordRef}
+                  ref={confirmPasswordRef}
                   {...confirmPasswordFieldProps}
                 />
               </FormSection>
@@ -91,8 +91,13 @@ const Signup = () => {
               <CheckboxContainer />
 
               <Button
-                form={signupForm}
                 aria-label="Sign Up"
+                disabled={
+                  !signupForm.username.valid ||
+                  !signupForm.email.valid ||
+                  !signupForm.newpassword.valid ||
+                  !signupForm.confirmPassword.valid
+                }
               >
                 Signup
               </Button>
@@ -102,6 +107,20 @@ const Signup = () => {
                 linkText="Login"
                 link="#"
               />
+
+              <button onClick={
+                () => { if (!!usernameRef.current) usernameRef.current.select(); }
+              }>click 1</button>
+              <button onClick={
+                () => { if (!!newPasswordRef.current) newPasswordRef.current.select(); }
+              }>click 2</button>
+              <button onClick={
+                () => { if (!!confirmPasswordRef.current) confirmPasswordRef.current.select(); }
+              }>click 3</button>
+              <button onClick={
+                () => { if (!!emailRef.current) emailRef.current.select(); }
+              }>click 4</button>
+
             </Form>
           )
       }
