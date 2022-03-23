@@ -1,14 +1,9 @@
 import PropTypes from 'prop-types'
 
-const Button = ({ form, children, ...props }) => {
+const Button = ({ children, ...props }) => {
   return (
     <button
-      disabled={
-        !form.username.valid ||
-        !form.email.valid ||
-        !form.newpassword.valid ||
-        !form.confirmPassword.valid
-      }
+      
       {...props}
     >
       {children}
