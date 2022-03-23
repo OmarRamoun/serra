@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import HelpLink from './HelpLink'
+import PropTypes from 'prop-types';
+import HelpLink from '../HelpLink';
 
 
 const Checkbox = ({ id, text, linkText, link, ...props }) => {

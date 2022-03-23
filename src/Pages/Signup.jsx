@@ -1,11 +1,12 @@
 import SuccessSignup from './SuccessSignup';
-import Form from '../Components/Form.styles';
-import Heading from '../Components/Heading';
-import Field from '../Components/Field';
-import CheckboxContainer from '../Components/CheckboxContainer';
-import Button from '../Components/Button';
-import HelpLink from '../Components/HelpLink';
-import ErrorBox from '../Components/ErrorBox';
+import Form from '../Components/Form/Form.styles';
+import Heading from '../Components/Form/Heading.styles';
+import Field from '../Components/Form/Field/Field';
+import CheckboxContainer from '../Components/Form/Checkbox/CheckboxContainer';
+import Button from '../Components/Form/Button';
+import HelpLink from '../Components/Form/HelpLink';
+import ErrorBox from '../Components/Form/ErrorBox';
+
 import FormContext from '../Contexts/FormContext';
 import { FlexCenter } from '../Styles/Flex.styles';
 import { useContext, useEffect, createRef } from 'react';
@@ -66,23 +67,23 @@ const Signup = () => {
 
               <FormSection>
                 <Field
-                  ref={usernameRef}
+                  reference={usernameRef}
                   autoFocus
                   {...usernameFieldProps}
                 />
                 <Field
                   fieldType="email"
-                  ref={emailRef}
+                  reference={emailRef}
                   {...emailFieldProps}
                 />
                 <Field
                   fieldType="new-pass"
-                  ref={newPasswordRef}
+                  reference={newPasswordRef}
                   {...passwordFieldProps}
                 />
                 <Field
                   fieldType="confirm-pass"
-                  ref={confirmPasswordRef}
+                  reference={confirmPasswordRef}
                   {...confirmPasswordFieldProps}
                 />
               </FormSection>

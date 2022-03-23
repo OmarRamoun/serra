@@ -54,10 +54,8 @@ const Field = forwardRef(({ fieldType, ...props }, ref) => {
   return (
     <>
       <Input {...inputProps} {...props} />
-      {/* <p
-      >
-        
-      </p> */}
+      { /* <p>
+      </p>  */}
       {props.validate &&
         <ValidationNote
           fieldType={fieldType}

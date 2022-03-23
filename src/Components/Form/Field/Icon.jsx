@@ -1,4 +1,4 @@
-import useIcon from '../Hooks/useIcon';
+import useIcon from '../../../Hooks/useIcon';
 
 import styled from 'styled-components';
 import PropTypes from 'prop-types';

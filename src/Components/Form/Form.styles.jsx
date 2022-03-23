@@ -1,5 +1,5 @@
+import { FlexColumn } from '../../Styles/Flex.styles';
 import styled from 'styled-components';
-import { FlexColumn } from '../Styles/Flex.styles';
 
 
 const Form = styled.form`

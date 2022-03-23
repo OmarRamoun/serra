@@ -2,9 +2,10 @@ import Label from './Label';
 import TextBox from './TextBox';
 
 import PropTypes from 'prop-types';
+import { forwardRef } from 'react';
 
 
-const Input = ({ id, title, ref, ...props }) => {
+const Input = forwardRef(({ id, title, ...props }, ref) => {
 
   return (
     <div style={{ width: "100%" }}>
@@ -17,7 +18,7 @@ const Input = ({ id, title, ref, ...props }) => {
       />
     </div>
   )
-};
+});
 
 Input.propTypes = {
   id: PropTypes.string.isRequired,

@@ -1,7 +1,8 @@
-import Heading from '../Components/Heading';
-import Form from "../Components/Form.styles";
-import Field from "../Components/Field";
-import HelpLink from "../Components/HelpLink";
+import Heading from '../Components/Form/Heading.styles';
+import Form from '../Components/Form/Form.styles';
+import Field from '../Components/Form/Field/Field';
+import HelpLink from '../Components/Form/HelpLink';
+
 import { useContext, useEffect, createRef } from 'react';
 import FormContext from '../Contexts/FormContext';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,6 +10,7 @@ import { login } from '../features/user';
 import { EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
 import styled from 'styled-components';
 import { FlexCenter } from '../Styles/Flex.styles';
+
 
 const Container = styled.article`
   ${FlexCenter}
