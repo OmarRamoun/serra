@@ -1,7 +1,7 @@
-import Heading from '../Components/Form/Heading.styles';
+import Heading from '../Components/Heading.styles';
 import Form from '../Components/Form/Form.styles';
 import Field from '../Components/Form/Field/Field';
-import HelpLink from '../Components/Form/HelpLink';
+import HelpLink from '../Components/HelpLink';
 
 import { useContext, useEffect, createRef } from 'react';
 import FormContext from '../Contexts/FormContext';

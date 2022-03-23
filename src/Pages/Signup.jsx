@@ -1,10 +1,10 @@
 import SuccessSignup from './SuccessSignup';
 import Form from '../Components/Form/Form.styles';
-import Heading from '../Components/Form/Heading.styles';
+import Heading from '../Components/Heading.styles';
 import Field from '../Components/Form/Field/Field';
 import CheckboxContainer from '../Components/Form/Checkbox/CheckboxContainer';
-import Button from '../Components/Form/Button';
-import HelpLink from '../Components/Form/HelpLink';
+import Button from '../Components/Button';
+import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
 
 import FormContext from '../Contexts/FormContext';
