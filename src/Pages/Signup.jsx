@@ -92,11 +92,12 @@ const Signup = () => {
 
               <Button
                 aria-label="Sign Up"
+                type="submit"
                 disabled={
-                  !signupForm.username.valid ||
-                  !signupForm.email.valid ||
-                  !signupForm.newpassword.valid ||
-                  !signupForm.confirmPassword.valid
+                  !username.valid ||
+                  !email.valid ||
+                  !newPassword.valid.result ||
+                  !confirmPassword.valid
                 }
               >
                 Signup
