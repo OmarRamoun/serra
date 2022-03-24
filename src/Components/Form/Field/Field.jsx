@@ -5,16 +5,23 @@ import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
 
-const Field = forwardRef(({ fieldType, ...props }, ref) => {
+const Field = forwardRef(({ fieldType, valid, ...props }, ref) => {
 
-  let inputProps = { ref: ref }
+  let inputProps = { ref: ref, valid: valid };
   switch (fieldType) {
-    case "email":
+    case 'current-email':
+      inputProps = {
+        type: 'email',
+        title: 'E-Mail Address',
+        id: 'currentEmail',
+      };
+      break;
+    case "new-email":
       inputProps = {
         ...inputProps,
         type: "email",
         title: "E-Mail Address",
-        id: "email",
+        id: "newEmail",
       }
       break;
     case "new-pass":
@@ -24,10 +31,11 @@ const Field = forwardRef(({ fieldType, ...props }, ref) => {
         title: "Password",
         id: "newPassword",
       }
+      console.log("result", valid.result);
+      valid = valid.result;
       break;
     case "current-pass":
       inputProps = {
-        ...inputProps,
         type: "password",
         title: "Password",
         id: "currentPassword",
@@ -59,7 +67,7 @@ const Field = forwardRef(({ fieldType, ...props }, ref) => {
       {props.validate &&
         <ValidationNote
           fieldType={fieldType}
-          valid={props.valid}
+          valid={valid}
           ariaId={props.ariaId}
           value={props.value}
           focus={props.focus}
