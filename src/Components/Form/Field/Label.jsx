@@ -11,13 +11,18 @@ const StyledLabel = styled.label`
 `;
 
 const Label = ({ title, id, valid, validate }) => {
+
+  if (id === 'newPassword') {
+    valid = valid.result;
+  }
+
   return (
     <StyledLabel htmlFor={id} >
       {title}
       {/* validate prop determins to validate (in case of signup) or not to validate (in case of login) */}
       {validate &&
         <>
-          {valid && <FaCheck />}
+          {valid && <FaCheck /> }
           {!valid && <FaTimes />}
         </>
       }

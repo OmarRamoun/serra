@@ -1,5 +1,6 @@
 import { useContext, forwardRef, useState } from "react";
-import FormContext from '../../../Contexts/FormContext';
+import LoginContext from '../../../Contexts/LoginContext';
+import SignupContext from '../../../Contexts/SignupContext';
 import Icon from './Icon';
 
 import PropTypes from 'prop-types';
@@ -24,26 +25,30 @@ const StyledInput = styled.input`
   outline: none;
 `;
 
-const TextBox = forwardRef(
-  ({
+const TextBox = forwardRef((
+  {
     id,
     type,
     title,
-    valid,
     validate,
     ...props
   },
   ref
 ) => {
 
+  const { handleLoginValueChange } = useContext(LoginContext);
   const {
-    handleLoginFormChange,
-    handleSignupFormChange,
-    handleSignupFormFocusChange,
-    handleLoginFormFocusChange
-  } = useContext(FormContext);
+    handleSignupValueChange,
+    handleSignupFocusChange
+  } = useContext(SignupContext);
 
   const [showPass, setShowPass] = useState(false);
+
+  const innerProps = validate && {
+    onFocus: e => handleSignupFocusChange(e, true),
+    onBlur:  e => handleSignupFocusChange(e, false),
+    ref: ref
+  };
 
   return (
     <Container>
@@ -54,11 +59,13 @@ const TextBox = forwardRef(
         name={id}
         type={showPass ? "text" : type}
         placeholder={title}
-        ref={ref}
-        onChange={validate ? handleSignupFormChange : handleLoginFormChange}
-        onFocus={e => validate ? handleSignupFormFocusChange(e, true) : handleLoginFormFocusChange(e, true)}
-        onBlur={e => validate ? handleSignupFormFocusChange(e, false) : handleLoginFormFocusChange(e, false)}
+        onChange={
+          validate ?
+            handleSignupValueChange :
+            handleLoginValueChange
+        }
         required
+        {...innerProps}
         {...props}
       />
       {type === "password" &&
@@ -75,18 +82,15 @@ const TextBox = forwardRef(
   )
 });
 
-
 TextBox.propTypes = {
   id: PropTypes.string.isRequired,
   type: PropTypes.string,
   title: PropTypes.string.isRequired,
-  valid: PropTypes.bool,
   validate: PropTypes.bool,
 }
 
 TextBox.defaultProps = {
   type: 'text',
-  valid: false,
   validate: false,
 }
 

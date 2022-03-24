@@ -7,7 +7,7 @@ import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
 
-import FormContext from '../Contexts/FormContext';
+import SignupContext from '../Contexts/SignupContext';
 import { FlexCenter } from '../Styles/Flex.styles';
 import { useContext, useEffect, createRef } from 'react';
 import { FaInfoCircle } from 'react-icons/fa';
@@ -31,7 +31,7 @@ const Signup = () => {
     errMsg,
     signupForm,
     handleSubmit
-  } = useContext(FormContext);
+  } = useContext(SignupContext);
 
   const { username, email, newPassword, confirmPassword } = signupForm;
 
@@ -62,7 +62,7 @@ const Signup = () => {
         success ? (<SuccessSignup />)
           : (
             <Form onSubmit={handleSubmit}>
-              {/* <ErrorBox errMsg={errMsg}/> */}
+              <ErrorBox errMsg={errMsg}/>
               <Heading>signup</Heading>
 
               <FormSection>
@@ -92,11 +92,12 @@ const Signup = () => {
 
               <Button
                 aria-label="Sign Up"
+                type="submit"
                 disabled={
-                  !signupForm.username.valid ||
-                  !signupForm.email.valid ||
-                  !signupForm.newpassword.valid ||
-                  !signupForm.confirmPassword.valid
+                  !username.valid ||
+                  !email.valid ||
+                  !newPassword.valid.result ||
+                  !confirmPassword.valid
                 }
               >
                 Signup

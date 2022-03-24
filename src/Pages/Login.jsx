@@ -1,19 +1,19 @@
 import Heading from '../Components/Heading.styles';
 import Form from '../Components/Form/Form.styles';
 import Field from '../Components/Form/Field/Field';
+import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
-
-import { useContext, useEffect, createRef } from 'react';
-import FormContext from '../Contexts/FormContext';
-import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../features/user';
-import { EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
-import styled from 'styled-components';
+import SuccessLogin from './SuccessLogin';
+import LoginContext from '../Contexts/LoginContext';
+import ErrorBox from '../Components/Form/ErrorBox';
 import { FlexCenter } from '../Styles/Flex.styles';
+
+import { useContext } from 'react';
+import styled from 'styled-components';
 
 
 const Container = styled.article`
-  ${FlexCenter}
+  ${FlexCenter};
   flex: 1;
 `;
 
@@ -24,74 +24,51 @@ const FormSection = styled.section`
 
 const Login = () => {
 
-  const { loginSuccess, loginForm, handleLoginFormChange } = useContext(FormContext);
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.value);
+  const {
+    loginSuccess,
+    loginForm,
+    handleSubmit,
+    errMsg,
+    errRef
+  } = useContext(LoginContext);
+  const {
+    currentEmail: { fieldValue: email },
+    currentPassword: { fieldValue: password }
+  } = loginForm;
 
-  const emailRef = createRef();
-  const passwordRef = createRef();
-
-  // useEffect(() => {
-  //   // we can also useRef to set focus on email
-  //   console.log('Login.jsx rendered');
-  //   // emailRef.current.focus();
-  // }, []);
-
-  // useEffect(() => {
-  //   const result = EMAIL_REGEX.test(loginForm.email.fieldValue);
-  //   if (result) console.log("VAlid");
-  // }, [loginForm.email.fieldValue]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Submitted");
-    dispatch(login({
-      email: loginForm.email.fieldValue,
-      password: loginForm.currentPassword.fieldValue
-    }));
-  }
 
   return (
     <Container>
       {loginSuccess ? (
-        <section>
-          <h1>You are logged in!</h1>
-          <br />
-          {
-            Object.entries(user).map(([key, value]) => (
-              <p key={key}>{key}: {value}</p>
-            ))
-          }
-          <p>
-            <a href="#">Go to Home</a>
-          </p>
-        </section>
+        <SuccessLogin />
       ) : (
         <Form onSubmit={handleSubmit}>
+          <ErrorBox ref={errRef} errMsg={errMsg} />
+
           <Heading>login</Heading>
+
           <FormSection>
             <Field
-              type="email"
               autoFocus
-              value={loginForm.email.fieldValue}
-              onChange={handleLoginFormChange}
-              ref={emailRef}
-              valid={loginForm.email.valid}
-              validate
+              fieldType="current-email"
+              value={email}
             />
             <Field
-              type="current-pass"
-              value={loginForm.password}
-              onChange={handleLoginFormChange}
-              ref={passwordRef}
+              fieldType="current-pass"
+              value={password}
             />
           </FormSection>
-          <button
+
+          <Button
+            aria-label="Log In"
             type="submit"
-            aria-label="Log in"
+            disabled={
+              !(password && email)
+            }
           >
             LOGIN
-          </button>
+          </Button>
+
           <HelpLink
             text="Don't have an account yet?"
             linkText="Sign up"

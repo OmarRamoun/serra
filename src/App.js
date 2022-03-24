@@ -1,11 +1,12 @@
 import Header from "./Components/Header";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-import { FormContextProvider } from "./Contexts/FormContext";
-import styled, { createGlobalStyle } from "styled-components";
+import { LoginContextProvider } from "./Contexts/LoginContext";
+import { SignupContextProvider } from "./Contexts/SignupContext";
 import bg from "./Assets/Images/bg.jpg";
-import {FlexColumn} from './Styles/Flex.styles';
+import { FlexColumn } from "./Styles/Flex.styles";
 
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -30,10 +31,10 @@ function App() {
   return (
     <Container>
       <Header />
-      <FormContextProvider>
-        {/* <Login /> */}
-        <Signup />
-      </FormContextProvider>
+      <LoginContextProvider>
+        <Login />
+      </LoginContextProvider>
+      <SignupContextProvider>{/* <Signup /> */}</SignupContextProvider>
       <GlobalStyles />
     </Container>
   );
