@@ -42,7 +42,7 @@ const ValidationNote = ({
           )
         }
 
-        {fieldType === "email" &&
+        {fieldType === "new-email" &&
           (
             <p>
               <FaInfoCircle />
