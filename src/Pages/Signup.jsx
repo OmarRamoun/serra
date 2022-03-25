@@ -7,7 +7,7 @@ import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
 
-import SignupContext from '../Contexts/SignupContext';
+import { useSignup } from '../Contexts/SignupContext';
 import { FlexCenter } from '../Styles/Flex.styles';
 import { useContext, useEffect, createRef } from 'react';
 import { FaInfoCircle } from 'react-icons/fa';
@@ -27,19 +27,15 @@ const FormSection = styled.section`
 const Signup = () => {
 
   const {
-    success,
+    signupSuccess,
     errMsg,
+    errMsgRef,
+    usernameRef,
     signupForm,
     handleSubmit
-  } = useContext(SignupContext);
+  } = useSignup();
 
-  const { username, email, newPassword, confirmPassword } = signupForm;
-
-  const usernameRef = createRef();
-  const emailRef = createRef();
-  const newPasswordRef = createRef();
-  const confirmPasswordRef = createRef();
-  const errorMsgRef = createRef();
+  const { username, newEmail, newPassword, confirmPassword } = signupForm;
 
   const getFieldProps = (field, fieldAriaText) => ({
     validate: true,
@@ -52,38 +48,34 @@ const Signup = () => {
   });
 
   const usernameFieldProps = getFieldProps(username, "username");
-  const emailFieldProps = getFieldProps(email, "email");
+  const emailFieldProps = getFieldProps(newEmail, "new-email");
   const passwordFieldProps = getFieldProps(newPassword, "new-password");
   const confirmPasswordFieldProps = getFieldProps(confirmPassword, "confirm-password");
 
   return (
     <Container>
       {
-        success ? (<SuccessSignup />)
+        signupSuccess ? (<SuccessSignup />)
           : (
             <Form onSubmit={handleSubmit}>
-              <ErrorBox errMsg={errMsg}/>
+              <ErrorBox ref={errMsgRef} errMsg={errMsg} />
               <Heading>signup</Heading>
 
               <FormSection>
                 <Field
                   ref={usernameRef}
-                  autoFocus
                   {...usernameFieldProps}
                 />
                 <Field
-                  fieldType="email"
-                  ref={emailRef}
+                  fieldType="new-email"
                   {...emailFieldProps}
                 />
                 <Field
                   fieldType="new-pass"
-                  ref={newPasswordRef}
                   {...passwordFieldProps}
                 />
                 <Field
                   fieldType="confirm-pass"
-                  ref={confirmPasswordRef}
                   {...confirmPasswordFieldProps}
                 />
               </FormSection>
@@ -94,10 +86,12 @@ const Signup = () => {
                 aria-label="Sign Up"
                 type="submit"
                 disabled={
-                  !username.valid ||
-                  !email.valid ||
-                  !newPassword.valid.result ||
-                  !confirmPassword.valid
+                  !(
+                    username.valid &&
+                    newEmail.valid &&
+                    newPassword.valid.result &&
+                    confirmPassword.valid
+                  )
                 }
               >
                 Signup
@@ -108,20 +102,6 @@ const Signup = () => {
                 linkText="Login"
                 link="#"
               />
-
-              <button onClick={
-                () => { if (!!usernameRef.current) usernameRef.current.select(); }
-              }>click 1</button>
-              <button onClick={
-                () => { if (!!newPasswordRef.current) newPasswordRef.current.select(); }
-              }>click 2</button>
-              <button onClick={
-                () => { if (!!confirmPasswordRef.current) confirmPasswordRef.current.select(); }
-              }>click 3</button>
-              <button onClick={
-                () => { if (!!emailRef.current) emailRef.current.select(); }
-              }>click 4</button>
-
             </Form>
           )
       }

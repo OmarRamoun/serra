@@ -1,17 +1,23 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext, useContext, useRef } from "react";
 import { USERNAME_REGEX, EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
 import useFormChangeHandler from "../Hooks/useFormChangeHandler";
 // import { useForm } from '../Hooks/useForm';
 // import { useAuth } from '../Hooks/useAuth';
 import axios from "../Api/axios";
+import { v4 as uuidv4 } from 'uuid';
 
 
 const SignupContext = createContext({});
+const REGISTER_URL = '/create';
+
+export const useSignup = () => {
+  return useContext(SignupContext);
+}
 
 export const SignupContextProvider = ({ children }) => {
 
-  const REGISTER = '/signup';
-
+  const usernameRef = useRef();
+  const errMsgRef = useRef();
 
   // const [form, handleChange, resetForm] = useForm({
   //     username: {
@@ -29,11 +35,9 @@ export const SignupContextProvider = ({ children }) => {
     focus: false
   };
 
-  
-
   const [signupForm, setSignupForm] = useState({
     username: { ...initialValue, focus: true },
-    email: { ...initialValue },
+    newEmail: { ...initialValue },
     newPassword: {
       ...initialValue, valid: {
         length: false,
@@ -56,6 +60,14 @@ export const SignupContextProvider = ({ children }) => {
   const handleFormChange = useFormChangeHandler(setSignupForm);
 
   useEffect(() => {
+    usernameRef.current.focus();
+  }, []);
+
+  useEffect(() => {
+    setErrMsg("");
+  }, [signupForm]);
+
+  useEffect(() => {
     const result = USERNAME_REGEX.test(signupForm.username.fieldValue);
     setSignupForm(prevState => ({
       ...prevState,
@@ -67,15 +79,15 @@ export const SignupContextProvider = ({ children }) => {
   }, [signupForm.username.fieldValue]);
 
   useEffect(() => {
-    const result = EMAIL_REGEX.test(signupForm.email.fieldValue);
+    const result = EMAIL_REGEX.test(signupForm.newEmail.fieldValue);
     setSignupForm(prevState => ({
       ...prevState,
-      email: {
-        ...prevState.email,
+      newEmail: {
+        ...prevState.newEmail,
         valid: result
       }
     }));
-  }, [signupForm.email.fieldValue]);
+  }, [signupForm.newEmail.fieldValue]);
 
   useEffect(() => {
     const lengthResult = PASSWORD_REGEX.length.test(signupForm.newPassword.fieldValue);
@@ -114,7 +126,6 @@ export const SignupContextProvider = ({ children }) => {
     signupForm.confirmPassword.fieldValue
   ]);
 
-  
   const handleSignupFocusChange = (event, value) => {
     handleFormChange(event, "focus", value);
   };
@@ -123,46 +134,60 @@ export const SignupContextProvider = ({ children }) => {
     handleFormChange(event, "fieldValue", event.target.value);
   };
 
+  const clearForm = () => {
+    setSignupForm({
+      username: { ...initialValue, focus: true },
+      newEmail: { ...initialValue },
+      newPassword: {
+        ...initialValue, valid: {
+          length: false,
+          uppercase: false,
+          lowercase: false,
+          digits: false,
+          specialChar: false,
+          noSpace: false,
+          result: false
+        }
+      },
+      confirmPassword: { ...initialValue },
+      newsLetter: false,
+      terms: false
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // if button enabled with JS hack
-    const v1 = USERNAME_REGEX.test(signupForm.username.fieldValue);
-    // const v2 = PASSWORD_REGEX.test(signupForm.newPassword.fieldValue);
-    // if (!v1 || !v2) {
-    //   setErrMsg("Invalid Entry");
-    //   return;
-    // }
+
     try {
-      const { username, email, newPassword: password, newsLetter: newsletter } = signupForm;
-      const response = await axios.post(REGISTER,
-        JSON.stringify({ username, email, password, newsletter }),
-        {
-          headers: {
-            "Content-Type": "application/json"
-          },
-          withCredentials: true
-        }
+      const id = uuidv4();
+      let { username, newEmail: email, newPassword: password, newsLetter: newsletter } = signupForm;
+      username = username.fieldValue;
+      email = email.fieldValue;
+      password = password.fieldValue;
+
+      const response = await axios.post(REGISTER_URL,
+        JSON.stringify({ id, username, email, password, profile: { newsletter: newsletter.toString() } }),
       );
-      console.log(response.data);
-      // setLoginSuccess(true);
-      // clear input fields
+      setSignupSuccess(true);
+      clearForm();
     } catch (err) {
       if (!err?.response) {
         setErrMsg("Network Error");
-      } else if (err.response?.status === 409) {
-        setErrMsg('Username Taken');
+      } else if (err.response?.status === 400) {
+        setErrMsg(err.response.data.detail);
       } else {
         setErrMsg('Registration Failed')
       }
     }
+    errMsgRef.current.focus();
   }
-
-  console.log(Object.entries(signupForm).map(([k, v]) => v.valid));
 
   return (
     <SignupContext.Provider value={{
       signupSuccess,
       errMsg,
+      errMsgRef,
+      usernameRef,
       signupForm,
       handleSignupValueChange,
       handleSignupFocusChange,

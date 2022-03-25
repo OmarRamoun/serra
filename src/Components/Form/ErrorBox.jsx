@@ -22,7 +22,7 @@ const ErrorBox = forwardRef(({ errMsg }, ref) => {
 });
 
 ErrorBox.propTypes = {
-  errMsg: PropTypes.string.isRequired
+  errMsg: PropTypes.string
 }
 
 export default ErrorBox;

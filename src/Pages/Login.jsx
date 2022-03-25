@@ -4,11 +4,10 @@ import Field from '../Components/Form/Field/Field';
 import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import SuccessLogin from './SuccessLogin';
-import LoginContext from '../Contexts/LoginContext';
+import { useLogin } from '../Contexts/LoginContext';
 import ErrorBox from '../Components/Form/ErrorBox';
 import { FlexCenter } from '../Styles/Flex.styles';
 
-import { useContext } from 'react';
 import styled from 'styled-components';
 
 
@@ -30,7 +29,7 @@ const Login = () => {
     handleSubmit,
     errMsg,
     errRef
-  } = useContext(LoginContext);
+  } = useLogin();
   const {
     currentEmail: { fieldValue: email },
     currentPassword: { fieldValue: password }
