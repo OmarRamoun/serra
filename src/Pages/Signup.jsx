@@ -7,7 +7,7 @@ import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
 
-import SignupContext from '../Contexts/SignupContext';
+import { useSignup } from '../Contexts/SignupContext';
 import { FlexCenter } from '../Styles/Flex.styles';
 import { useContext, useEffect, createRef } from 'react';
 import { FaInfoCircle } from 'react-icons/fa';
@@ -31,7 +31,7 @@ const Signup = () => {
     errMsg,
     signupForm,
     handleSubmit
-  } = useContext(SignupContext);
+  } = useSignup();
 
   const { username, newEmail, newPassword, confirmPassword } = signupForm;
 
