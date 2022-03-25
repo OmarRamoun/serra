@@ -1,12 +1,13 @@
 import { login } from '../features/user';
 import useFormChangeHandler from '../Hooks/useFormChangeHandler';
-import { useState, createContext, useRef, useContext } from "react";
+import { useState, createContext, useRef, useContext, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import axios from '../Api/axios';
 
 
 const LoginContext = createContext({});
-const LOGIN_URL = '/auth';
+const LOGIN_URL = '/login';
+const READ_URL = '/read';
 
 export const useLogin = () => {
   return useContext(LoginContext);
@@ -26,6 +27,10 @@ export const LoginContextProvider = ({ children }) => {
 
   const handleFormChange = useFormChangeHandler(setLoginForm);
 
+  useEffect(() => {
+    setErrMsg("");
+  }, [loginForm])
+
   const handleLoginValueChange = event => {
     handleFormChange(event, "fieldValue", event.target.value);
   };
@@ -44,19 +49,23 @@ export const LoginContextProvider = ({ children }) => {
       const response = await axios.post(LOGIN_URL,
         JSON.stringify({
           email: loginForm.currentEmail.fieldValue,
-          password: loginForm.currentEmail.fieldValue
-        }),
-        {
-          headers: { 'Content-Type': 'application/json' },
-          withCredentials: true
-        }
+          password: loginForm.currentPassword.fieldValue
+        })
       );
       // console.log(JSON.stringify(response?.data));
-      // const accessToken = response?.data?.accessToken;
+      const sessionId = response?.data?.session?.id;
       // const roles = response?.data?.roles;
+      let readResponse = await axios.post(READ_URL,
+        JSON.stringify({
+          email: loginForm.currentEmail.fieldValue,
+        })
+      );
+      const { username, profile } = readResponse.data.account;
       dispatch(login({
         email: loginForm.currentEmail.fieldValue,
-        password: loginForm.currentPassword.fieldValue
+        username,
+        sessionId,
+        newsletter: Boolean(profile.newsletter)
       }));
       clearLoginForm();
       setLoginSuccess(true);
@@ -65,10 +74,8 @@ export const LoginContextProvider = ({ children }) => {
         setErrMsg('No Server Response');
       } else if (err.response?.status === 400) {
         setErrMsg('Missing Username or Password');
-      } else if (err.response?.status === 401) {
-        setErrMsg('Unauthorized');
       } else {
-        setErrMsg('Login Failed');
+        setErrMsg('Wrong Email or Password');
       }
       errRef.current.focus();
     }
