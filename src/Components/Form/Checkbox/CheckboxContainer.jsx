@@ -1,10 +1,9 @@
 import Checkbox from "./Checkbox";
-import { useContext } from "react";
-import FormContext from "../../../Contexts/FormContext";
+import { useSignup } from "../../../Contexts/SignupContext";
 
 const CheckboxContainer = () => {
 
-  const { signupForm, handleSignupFormChange } = useContext(FormContext);
+  const { signupForm, handleSignupValueChange } = useSignup();
 
   return (
     <section>
@@ -12,7 +11,7 @@ const CheckboxContainer = () => {
         id="newsLetter"
         text="I want to receive news about Synergy of Serra"
         checked={signupForm.newsLetter}
-        onChange={handleSignupFormChange}
+        onChange={handleSignupValueChange}
       />
       <Checkbox
         id="terms"
@@ -20,7 +19,7 @@ const CheckboxContainer = () => {
         linkText="Terms of Service"
         link="#"
         checked={signupForm.terms}
-        onChange={handleSignupFormChange}
+        onChange={handleSignupValueChange}
       />
     </section>
   )

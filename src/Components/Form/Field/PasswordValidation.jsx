@@ -1,5 +1,4 @@
-import FormContext from '../../../Contexts/FormContext';
-import { useContext } from 'react';
+import { useSignup } from '../../../Contexts/SignupContext';
 
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import styled from 'styled-components';
@@ -11,7 +10,7 @@ const Container = styled.div`
 
 const PasswordValidationNote = () => {
 
-  const { signupForm: { newPassword : { valid } } } = useContext(FormContext);
+  const { signupForm: { newPassword: { valid } } } = useSignup();
 
   return (
     <Container id="pwdnote">
