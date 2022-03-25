@@ -62,8 +62,6 @@ const Field = forwardRef(({ fieldType, valid, ...props }, ref) => {
   return (
     <>
       <Input {...inputProps} {...props} />
-      { /* <p>
-      </p>  */}
       {props.validate &&
         <ValidationNote
           fieldType={fieldType}
