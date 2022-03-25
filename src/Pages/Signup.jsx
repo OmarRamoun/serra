@@ -27,19 +27,15 @@ const FormSection = styled.section`
 const Signup = () => {
 
   const {
-    success,
+    signupSuccess,
     errMsg,
+    errMsgRef,
+    usernameRef,
     signupForm,
     handleSubmit
   } = useSignup();
 
   const { username, newEmail, newPassword, confirmPassword } = signupForm;
-
-  const usernameRef = createRef();
-  const emailRef = createRef();
-  const newPasswordRef = createRef();
-  const confirmPasswordRef = createRef();
-  const errorMsgRef = createRef();
 
   const getFieldProps = (field, fieldAriaText) => ({
     validate: true,
@@ -59,31 +55,27 @@ const Signup = () => {
   return (
     <Container>
       {
-        success ? (<SuccessSignup />)
+        signupSuccess ? (<SuccessSignup />)
           : (
             <Form onSubmit={handleSubmit}>
-              <ErrorBox errMsg={errMsg} />
+              <ErrorBox ref={errMsgRef} errMsg={errMsg} />
               <Heading>signup</Heading>
 
               <FormSection>
                 <Field
-                  autoFocus
                   ref={usernameRef}
                   {...usernameFieldProps}
                 />
                 <Field
                   fieldType="new-email"
-                  ref={emailRef}
                   {...emailFieldProps}
                 />
                 <Field
                   fieldType="new-pass"
-                  ref={newPasswordRef}
                   {...passwordFieldProps}
                 />
                 <Field
                   fieldType="confirm-pass"
-                  ref={confirmPasswordRef}
                   {...confirmPasswordFieldProps}
                 />
               </FormSection>
@@ -110,20 +102,6 @@ const Signup = () => {
                 linkText="Login"
                 link="#"
               />
-
-              <button onClick={
-                () => { if (!!usernameRef.current) usernameRef.current.select(); }
-              }>click 1</button>
-              <button onClick={
-                () => { if (!!newPasswordRef.current) newPasswordRef.current.select(); }
-              }>click 2</button>
-              <button onClick={
-                () => { if (!!confirmPasswordRef.current) confirmPasswordRef.current.select(); }
-              }>click 3</button>
-              <button onClick={
-                () => { if (!!emailRef.current) emailRef.current.select(); }
-              }>click 4</button>
-
             </Form>
           )
       }
