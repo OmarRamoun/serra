@@ -33,7 +33,7 @@ const Signup = () => {
     handleSubmit
   } = useContext(SignupContext);
 
-  const { username, email, newPassword, confirmPassword } = signupForm;
+  const { username, newEmail, newPassword, confirmPassword } = signupForm;
 
   const usernameRef = createRef();
   const emailRef = createRef();
@@ -52,7 +52,7 @@ const Signup = () => {
   });
 
   const usernameFieldProps = getFieldProps(username, "username");
-  const emailFieldProps = getFieldProps(email, "email");
+  const emailFieldProps = getFieldProps(newEmail, "new-email");
   const passwordFieldProps = getFieldProps(newPassword, "new-password");
   const confirmPasswordFieldProps = getFieldProps(confirmPassword, "confirm-password");
 
@@ -62,17 +62,17 @@ const Signup = () => {
         success ? (<SuccessSignup />)
           : (
             <Form onSubmit={handleSubmit}>
-              <ErrorBox errMsg={errMsg}/>
+              <ErrorBox errMsg={errMsg} />
               <Heading>signup</Heading>
 
               <FormSection>
                 <Field
-                  ref={usernameRef}
                   autoFocus
+                  ref={usernameRef}
                   {...usernameFieldProps}
                 />
                 <Field
-                  fieldType="email"
+                  fieldType="new-email"
                   ref={emailRef}
                   {...emailFieldProps}
                 />
@@ -94,10 +94,12 @@ const Signup = () => {
                 aria-label="Sign Up"
                 type="submit"
                 disabled={
-                  !username.valid ||
-                  !email.valid ||
-                  !newPassword.valid.result ||
-                  !confirmPassword.valid
+                  !(
+                    username.valid &&
+                    newEmail.valid &&
+                    newPassword.valid.result &&
+                    confirmPassword.valid
+                  )
                 }
               >
                 Signup
