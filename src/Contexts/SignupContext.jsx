@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext, useContext } from "react";
 import { USERNAME_REGEX, EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
 import useFormChangeHandler from "../Hooks/useFormChangeHandler";
 // import { useForm } from '../Hooks/useForm';
@@ -7,6 +7,10 @@ import axios from "../Api/axios";
 
 
 const SignupContext = createContext({});
+
+export const useSignup = () => {
+  return useContext(SignupContext);
+}
 
 export const SignupContextProvider = ({ children }) => {
 
@@ -33,7 +37,7 @@ export const SignupContextProvider = ({ children }) => {
 
   const [signupForm, setSignupForm] = useState({
     username: { ...initialValue, focus: true },
-    email: { ...initialValue },
+    newEmail: { ...initialValue },
     newPassword: {
       ...initialValue, valid: {
         length: false,
@@ -67,15 +71,15 @@ export const SignupContextProvider = ({ children }) => {
   }, [signupForm.username.fieldValue]);
 
   useEffect(() => {
-    const result = EMAIL_REGEX.test(signupForm.email.fieldValue);
+    const result = EMAIL_REGEX.test(signupForm.newEmail.fieldValue);
     setSignupForm(prevState => ({
       ...prevState,
-      email: {
-        ...prevState.email,
+      newEmail: {
+        ...prevState.newEmail,
         valid: result
       }
     }));
-  }, [signupForm.email.fieldValue]);
+  }, [signupForm.newEmail.fieldValue]);
 
   useEffect(() => {
     const lengthResult = PASSWORD_REGEX.length.test(signupForm.newPassword.fieldValue);
@@ -133,7 +137,7 @@ export const SignupContextProvider = ({ children }) => {
     //   return;
     // }
     try {
-      const { username, email, newPassword: password, newsLetter: newsletter } = signupForm;
+      const { username, newEmail: email, newPassword: password, newsLetter: newsletter } = signupForm;
       const response = await axios.post(REGISTER,
         JSON.stringify({ username, email, password, newsletter }),
         {

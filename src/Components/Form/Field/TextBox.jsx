@@ -1,6 +1,6 @@
 import { useContext, forwardRef, useState } from "react";
-import LoginContext from '../../../Contexts/LoginContext';
-import SignupContext from '../../../Contexts/SignupContext';
+import { useLogin } from '../../../Contexts/LoginContext';
+import { useSignup } from '../../../Contexts/SignupContext';
 import Icon from './Icon';
 
 import PropTypes from 'prop-types';
@@ -36,11 +36,11 @@ const TextBox = forwardRef((
   ref
 ) => {
 
-  const { handleLoginValueChange } = useContext(LoginContext);
+  const { handleLoginValueChange } = useLogin();
   const {
     handleSignupValueChange,
     handleSignupFocusChange
-  } = useContext(SignupContext);
+  } = useSignup();
 
   const [showPass, setShowPass] = useState(false);
 

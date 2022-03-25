@@ -1,12 +1,16 @@
 import { login } from '../features/user';
 import useFormChangeHandler from '../Hooks/useFormChangeHandler';
-import { useState, createContext, useRef } from "react";
+import { useState, createContext, useRef, useContext } from "react";
 import { useDispatch } from 'react-redux';
 import axios from '../Api/axios';
 
 
 const LoginContext = createContext({});
 const LOGIN_URL = '/auth';
+
+export const useLogin = () => {
+  return useContext(LoginContext);
+};
 
 export const LoginContextProvider = ({ children }) => {
 
