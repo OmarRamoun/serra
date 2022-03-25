@@ -12,7 +12,7 @@ export const userSlice = createSlice({
     }
   },
   reducers: {
-    setUser: (state, action) => {
+    signup: (state, action) => {
       state.value = action.payload;
     },
     login: (state, action) => {
