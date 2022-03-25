@@ -52,9 +52,7 @@ export const LoginContextProvider = ({ children }) => {
           password: loginForm.currentPassword.fieldValue
         })
       );
-      // console.log(JSON.stringify(response?.data));
       const sessionId = response?.data?.session?.id;
-      // const roles = response?.data?.roles;
       let readResponse = await axios.post(READ_URL,
         JSON.stringify({
           email: loginForm.currentEmail.fieldValue,
