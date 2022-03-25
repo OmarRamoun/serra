@@ -32,9 +32,11 @@ function App() {
     <Container>
       <Header />
       <LoginContextProvider>
-        <Login />
+        {/* <Login /> */}
       </LoginContextProvider>
-      <SignupContextProvider>{/* <Signup /> */}</SignupContextProvider>
+      <SignupContextProvider>
+        <Signup />
+      </SignupContextProvider>
       <GlobalStyles />
     </Container>
   );
