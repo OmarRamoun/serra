@@ -37,7 +37,7 @@ const SuccessLogin = () => {
       }
 
       <Button onClick={handleLogout}>Logout</Button>
-      <HelpLink link="/signup" linkText="Back" text="Go"/>
+      <HelpLink link="/signup" linkText="Back" text="Go" />
     </section>
   ); else return (
     <section
