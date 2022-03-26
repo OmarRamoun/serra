@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const HelpLink = ({ text, linkText, link }) => {
   return (
     <p>
       {text}
       {linkText &&
-        <a href={link}>
+        <Link to={link}>
           {linkText}
-        </a>
+        </Link>
       }
       .
     </p>
