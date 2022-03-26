@@ -1,15 +1,31 @@
 import PropTypes from 'prop-types';
 import HelpLink from '../../HelpLink';
+import styled from 'styled-components';
 
+
+const StyledCheckbox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-shadow: rgb(12 11 19) 2px 2px 4px;
+`;
 
 const Checkbox = ({ id, text, linkText, link, ...props }) => {
   return (
-    <div>
+    <StyledCheckbox>
       <input
         type="checkbox"
         id={id}
         name={id}
         {...props}
+        style={{
+          padding: "1rem",
+          width: "0.9rem",
+          height: "0.9rem",
+        }}
       />
       <label htmlFor={id}>
         <HelpLink
@@ -18,7 +34,7 @@ const Checkbox = ({ id, text, linkText, link, ...props }) => {
           link={link}
         />
       </label>
-    </div>
+    </StyledCheckbox>
   )
 }
 
