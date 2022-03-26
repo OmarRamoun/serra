@@ -1,12 +1,15 @@
-import { login } from '../features/user';
+import { login, logout } from '../features/user';
 import useFormChangeHandler from '../Hooks/useFormChangeHandler';
 import { useState, createContext, useRef, useContext, useEffect } from "react";
 import { useDispatch } from 'react-redux';
 import axios from '../Api/axios';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const LoginContext = createContext({});
 const LOGIN_URL = '/login';
+const LOGOUT_URL = '/logout';
 const READ_URL = '/read';
 
 export const useLogin = () => {
@@ -15,8 +18,11 @@ export const useLogin = () => {
 
 export const LoginContextProvider = ({ children }) => {
 
+  const user = useSelector((state) => state.user.value);
+
   const dispatch = useDispatch();
   const errRef = useRef(null);
+  const navigate = useNavigate();
 
   const [loginForm, setLoginForm] = useState({
     currentEmail: { fieldValue: "" },
@@ -67,6 +73,7 @@ export const LoginContextProvider = ({ children }) => {
       }));
       clearLoginForm();
       setLoginSuccess(true);
+      navigate('/' + username);
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -79,6 +86,26 @@ export const LoginContextProvider = ({ children }) => {
     }
   };
 
+  const handleLogout = async (e) => {
+    try {
+      const response = await axios.post(LOGOUT_URL,
+        JSON.stringify({
+          sessionId: user.sessionId
+        })
+      );
+      dispatch(logout());
+      navigate('/');
+      console.log("button clicked");
+    } catch (err) {
+      if (!err?.response) {
+        setErrMsg('No Server Response');
+      } else {
+        setErrMsg('Refresh Page');
+      }
+      errRef.current.focus();
+    }
+  };
+
   return (
     <LoginContext.Provider value={
       {
@@ -86,6 +113,7 @@ export const LoginContextProvider = ({ children }) => {
         handleLoginValueChange,
         loginSuccess,
         handleSubmit,
+        handleLogout,
         errMsg,
         errRef
       }
