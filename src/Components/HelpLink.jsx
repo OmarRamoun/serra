@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom'
 
 const HelpLink = ({ text, linkText, link }) => {
   return (
-    <p>
+    <p style={{display: "flex", alignItems: "center", gap: "0.4rem"}}>
       {text}
       {linkText &&
-        <Link to={link}>
+        <Link to={link} style={{textDecoration: "none", color: "#FFD026"}}>
           {linkText}
         </Link>
       }
-      .
     </p>
   )
 }

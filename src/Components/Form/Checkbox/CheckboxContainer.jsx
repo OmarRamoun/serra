@@ -6,7 +6,7 @@ const CheckboxContainer = () => {
   const { signupForm, handleSignupValueChange } = useSignup();
 
   return (
-    <section>
+    <section style={{marginBlock : "1rem"}}>
       <Checkbox
         id="newsLetter"
         text="I want to receive news about Synergy of Serra"

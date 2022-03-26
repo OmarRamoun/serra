@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.3s cubic-bezier(.8,.36,.94,.49);
+    transition-timing-function: cubic-bezier(.8,.36,.94,.49);;
   }
   body {
     font-family: 'Exo 2', sans-serif;

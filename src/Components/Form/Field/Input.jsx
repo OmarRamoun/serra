@@ -23,7 +23,7 @@ const Input = forwardRef(({ id, title, ...props }, ref) => {
 Input.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-}
+};
 
 export default Input;
 

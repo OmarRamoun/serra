@@ -9,20 +9,26 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
-  height: 1.6rem;
-  font-size: 1rem;
-  border-bottom: 1px solid rgb(125, 125, 140);
+  height: 1.8rem;
+  border-bottom: 1px solid rgba(125, 125, 140, 0.5);
 `;
 
 const StyledInput = styled.input`
   flex: 1;
-  background: #000;
   border: none;
-  color: #fff;
+  outline: none;
+  border-radius: 1px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
   font-family: 'Exo 2' , sans-serif;
-  outline: none;
+  font-weight: 400;
+  font-size: 0.9rem;
+
+  &:focus ~ img {
+    filter: brightness(0.9);
+  }
 `;
 
 const TextBox = forwardRef((
