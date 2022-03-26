@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import logo from '../Assets/Images/logo.png';
 import { FlexCenter } from "../Styles/Flex.styles";
+import { Link } from 'react-router-dom';
 
 
 const StyledHeader = styled.header`
@@ -24,9 +25,9 @@ const Logo = styled.img`
 const Header = () => {
   return (
     <StyledHeader>
-      <a href="/">
+      <Link to="/">
         <Logo src={logo} alt="Synergy of Serra Logo" />
-      </a>
+      </Link>
     </StyledHeader>
   )
 }
