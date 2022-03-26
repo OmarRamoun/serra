@@ -38,50 +38,46 @@ const Login = () => {
 
   return (
     <Container>
-      {loginSuccess ? (
-        <SuccessLogin />
-      ) : (
-        <Form onSubmit={handleSubmit}>
-          <ErrorBox ref={errRef} errMsg={errMsg} />
+      <Form onSubmit={handleSubmit}>
+        <ErrorBox ref={errRef} errMsg={errMsg} />
 
-          <Heading>login</Heading>
+        <Heading>login</Heading>
 
-          <FormSection>
-            <Field
-              autoFocus
-              fieldType="current-email"
-              value={email}
-            />
-            <Field
-              fieldType="current-pass"
-              value={password}
-            />
-          </FormSection>
-
-          <Button
-            aria-label="Log In"
-            type="submit"
-            disabled={
-              !(password && email)
-            }
-          >
-            LOGIN
-          </Button>
-
-          <HelpLink
-            text="Don't have an account yet?"
-            linkText="Sign up"
-            link="#"
+        <FormSection>
+          <Field
+            autoFocus
+            fieldType="current-email"
+            value={email}
           />
-          <HelpLink
-            text="Don't Remember Your Password?"
-            linkText="Recover My Password"
-            link="#"
+          <Field
+            fieldType="current-pass"
+            value={password}
           />
-        </Form>
-      )}
+        </FormSection>
+
+        <Button
+          aria-label="Log In"
+          type="submit"
+          disabled={
+            !(password && email)
+          }
+        >
+          LOGIN
+        </Button>
+
+        <HelpLink
+          text="Don't have an account yet?"
+          linkText="Sign up"
+          link="/signup"
+        />
+        <HelpLink
+          text="Don't Remember Your Password?"
+          linkText="Recover My Password"
+          link="#"
+        />
+      </Form>
     </Container>
   )
-}
+};
 
 export default Login;
