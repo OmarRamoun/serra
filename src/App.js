@@ -1,44 +1,23 @@
-import Header from "./Components/Header";
-import Login from "./Pages/Login";
-import Signup from "./Pages/Signup";
-import { LoginContextProvider } from "./Contexts/LoginContext";
-import { SignupContextProvider } from "./Contexts/SignupContext";
-import bg from "./Assets/Images/bg.jpg";
-import { FlexColumn } from "./Styles/Flex.styles";
+import Layout from "./Layout";
+import Home from "./Pages/Home";
+import NotFoundPage from "./Pages/404";
+import SignupWrapper from "./Pages/SignupWrapper";
+import LoginWrapper from "./Pages/LoginWrapper";
+import SuccessLogin from "./Pages/SuccessLogin";
 
-import styled, { createGlobalStyle } from "styled-components";
-
-const GlobalStyles = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.3s cubic-bezier(.8,.36,.94,.49);
-  }
-  body {
-    font-family: 'Exo 2', sans-serif;
-  }
-`;
-
-const Container = styled.main`
-  ${FlexColumn}
-  min-height: 100vh;
-  background: url(${bg}) no-repeat fixed;
-  background-size: cover;
-`;
+import { Route, Routes, useNavigate } from "react-router-dom";
 
 function App() {
   return (
-    <Container>
-      <Header />
-      <LoginContextProvider>
-        {/* <Login /> */}
-      </LoginContextProvider>
-      <SignupContextProvider>
-        <Signup />
-      </SignupContextProvider>
-      <GlobalStyles />
-    </Container>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/login" element={<LoginWrapper />} />
+        <Route path="/signup" element={<SignupWrapper />} />
+        <Route path="/:username" element={<SuccessLogin />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }
 
