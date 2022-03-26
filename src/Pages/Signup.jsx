@@ -9,8 +9,6 @@ import ErrorBox from '../Components/Form/ErrorBox';
 
 import { useSignup } from '../Contexts/SignupContext';
 import { FlexCenter } from '../Styles/Flex.styles';
-import { useContext, useEffect, createRef } from 'react';
-import { FaInfoCircle } from 'react-icons/fa';
 // import useField from '../Hooks/useField';
 import styled from 'styled-components';
 
@@ -100,7 +98,7 @@ const Signup = () => {
               <HelpLink
                 text="Already Have an Account?"
                 linkText="Login"
-                link="#"
+                link="/login"
               />
             </Form>
           )
