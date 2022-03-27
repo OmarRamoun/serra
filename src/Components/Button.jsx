@@ -26,11 +26,33 @@ const StyledButton = styled.button`
     color: #000;
     transform: translateY(4px) scale(0.95) skewX(-25deg);
   }
-
   &:disabled {
     background: #eee;
     border-color: #999;
     color: #999;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    box-shadow: 0 0 10px 40px white;
+  }
+  &:active:after {
+    box-shadow: 0 0 0 0 white;
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    top:0;
+    opacity: 1;
+    transition: 0s;
   }
 `;
 
