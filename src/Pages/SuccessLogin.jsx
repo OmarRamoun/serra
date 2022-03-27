@@ -46,11 +46,10 @@ const SuccessLogin = () => {
   const { handleLogout, errMsg, errRef } = useLogin();
   const user = useSelector(state => state.user.value);
 
-  if (user.isLoggedIn) return (
+  return (
     <Container>
       <ErrorBox errMsg={errMsg} errRef={errRef} />
       <h1>You are logged in!</h1>
-      <br />
       {
         Object.entries(user).map(([key, value]) => {
           if (key === "sessionId") return null;
@@ -64,16 +63,11 @@ const SuccessLogin = () => {
         style={{ marginBlock: "1rem", alignSelf: "center" }}
         onClick={handleLogout}
       >
-        Logout</Button>
+        Logout
+      </Button>
       <HelpLink link="/" linkText="Home Page" text="Visit" />
     </Container>
-  ); else return (
-    <Container>
-      <h1>You are not logged in!</h1>
-      <br />
-      <HelpLink link="/login" linkText="Login" text="You can" />
-    </Container>
-  )
+  );
 }
 
 export default SuccessLogin;

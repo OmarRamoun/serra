@@ -75,7 +75,6 @@ const Button = ({ children, ...props }) => {
 }
 
 Button.proptTypes = {
-  form: PropTypes.object.isRequired,
   children: PropTypes.node.isRequired
 }
 

@@ -50,6 +50,7 @@ const Signup = () => {
   const passwordFieldProps = getFieldProps(newPassword, "new-password");
   const confirmPasswordFieldProps = getFieldProps(confirmPassword, "confirm-password");
 
+  // {/* validate prop determins to validate (in case of signup) or not to validate (in case of login) */}
   return (
     <Container>
       {

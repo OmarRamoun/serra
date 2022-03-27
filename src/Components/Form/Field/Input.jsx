@@ -9,7 +9,7 @@ const Input = forwardRef(({ id, title, ...props }, ref) => {
 
   return (
     <div style={{ width: "100%" }}>
-      <Label title={title} id={id} validate valid />
+      <Label title={title} id={id} />
       <TextBox
         id={id}
         title={title}

@@ -43,7 +43,7 @@ const SuccessSignup = () => {
       <img src={cards} alt='' style={{width: "22rem", opacity: "0.9"}}/>
       <h1>You have Successfully Signedup</h1>
       <br />
-      <HelpLink link="/login" linkText="Login" text="Go" />
+      <HelpLink link="/login" linkText="Login" text="You can" />
     </Container>
   )
 }

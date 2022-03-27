@@ -1,8 +1,8 @@
-import { FaInfoCircle } from 'react-icons/fa';
+import PasswordValidationNote from './PasswordValidation';
 
+import { FaInfoCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
-import PasswordValidationNote from './PasswordValidation';
 
 
 const Container = styled.div`
@@ -40,7 +40,6 @@ const ValidationNote = ({
     >
       <InnerWrapper
         id={ariaId}
-        className={showNote ? "instructions" : "offscreen"}
         aria-live="assertive"
       >
         {fieldType === "username" &&
@@ -58,16 +57,14 @@ const ValidationNote = ({
           (
             <>
               <FaInfoCircle />
-              Email is required and must be a valid email address.<br />
+              Email is required and must be a valid email address.
             </>
           )
         }
 
         {fieldType === "new-pass" &&
           (
-            <>
-              <PasswordValidationNote />
-            </>
+            <PasswordValidationNote />
           )
         }
 
@@ -93,6 +90,7 @@ ValidationNote.propTypes = {
   ariaId: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   focus: PropTypes.bool.isRequired,
+  valid: PropTypes.bool.isRequired,
 }
 
 export default ValidationNote;

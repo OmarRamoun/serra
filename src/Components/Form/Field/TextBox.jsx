@@ -53,7 +53,6 @@ const TextBox = forwardRef((
   const innerProps = validate && {
     onFocus: e => handleSignupFocusChange(e, true),
     onBlur:  e => handleSignupFocusChange(e, false),
-    ref: ref
   };
 
   return (
@@ -65,6 +64,7 @@ const TextBox = forwardRef((
         name={id}
         type={showPass ? "text" : type}
         placeholder={title}
+        ref={ref}
         onChange={
           validate ?
             handleSignupValueChange :
