@@ -47,9 +47,6 @@ const SuccessLogin = () => {
   const { handleLogout, errMsg, errRef } = useLogin();
   const { username } = useParams();
   const user = useSelector((state) => state.user.value);
-  console.log("user: ", user);
-
-  console.log(handleLogout);
 
   if (user.username === username) return (
     <Container>
@@ -76,7 +73,7 @@ const SuccessLogin = () => {
     <Container>
       <h1>You are not logged in!</h1>
       <br />
-      <HelpLink link="/signup" linkText="Back" text="Go" />
+      <HelpLink link="/login" linkText="Login" text="You can" />
     </Container>
   )
 }
