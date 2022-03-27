@@ -21,7 +21,7 @@ const StyledInput = styled.input`
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   color: #fff;
-  background: rgba(0,0,0,0.5);
+  background: ${({ valid, value, focus, validate }) => validate && !valid && value && !focus ? `rgba(255,0,0,0.3)` : `rgba(0,0,0,0.5)`};
   font-family: 'Exo 2' , sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
