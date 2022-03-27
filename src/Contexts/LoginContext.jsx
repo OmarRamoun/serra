@@ -65,15 +65,17 @@ export const LoginContextProvider = ({ children }) => {
         })
       );
       const { username, profile } = readResponse.data.account;
-      dispatch(login({
+      const currentUser = {
         email: loginForm.currentEmail.fieldValue,
         username,
         sessionId,
         newsletter: Boolean(profile.newsletter)
-      }));
+      };
+      dispatch(login({...currentUser}));
       clearLoginForm();
       setLoginSuccess(true);
-      navigate('/' + username);
+      localStorage.setItem('user', JSON.stringify({...currentUser, isLoggedIn: true}));
+      navigate('/profile');
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
@@ -94,8 +96,8 @@ export const LoginContextProvider = ({ children }) => {
         })
       );
       dispatch(logout());
+      localStorage.removeItem('user');
       navigate('/');
-      console.log("button clicked");
     } catch (err) {
       if (!err?.response) {
         setErrMsg('No Server Response');
