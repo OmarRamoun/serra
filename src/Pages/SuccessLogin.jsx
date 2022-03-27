@@ -4,7 +4,6 @@ import ErrorBox from "../Components/Form/ErrorBox";
 import { useLogin } from "../Contexts/LoginContext";
 
 import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 import styled from 'styled-components';
 
 
@@ -45,10 +44,9 @@ const Container = styled.section`
 const SuccessLogin = () => {
 
   const { handleLogout, errMsg, errRef } = useLogin();
-  const { username } = useParams();
-  const user = useSelector((state) => state.user.value);
+  const user = useSelector(state => state.user.value);
 
-  if (user.username === username) return (
+  if (user.isLoggedIn) return (
     <Container>
       <ErrorBox errMsg={errMsg} errRef={errRef} />
       <h1>You are logged in!</h1>
@@ -67,7 +65,7 @@ const SuccessLogin = () => {
         onClick={handleLogout}
       >
         Logout</Button>
-      <HelpLink link="/signup" linkText="Back" text="Go" />
+      <HelpLink link="/" linkText="Home Page" text="Visit" />
     </Container>
   ); else return (
     <Container>
