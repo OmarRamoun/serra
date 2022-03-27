@@ -17,7 +17,7 @@ const Container = styled.article`
 `;
 
 const FormSection = styled.section`
-  min-width: 80%;
+  min-width: 100%;
 `;
 
 
@@ -61,6 +61,7 @@ const Login = () => {
           disabled={
             !(password && email)
           }
+          style={{marginBlock: "1rem"}}
         >
           LOGIN
         </Button>

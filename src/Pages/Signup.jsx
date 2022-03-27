@@ -19,7 +19,7 @@ const Container = styled.article`
 `;
 
 const FormSection = styled.section`
-  min-width: 80%;
+  min-width: 100%;
 `;
 
 const Signup = () => {
@@ -57,6 +57,7 @@ const Signup = () => {
           : (
             <Form onSubmit={handleSubmit}>
               <ErrorBox ref={errMsgRef} errMsg={errMsg} />
+
               <Heading>signup</Heading>
 
               <FormSection>

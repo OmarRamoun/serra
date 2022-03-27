@@ -6,7 +6,12 @@ const HelpLink = ({ text, linkText, link }) => {
     <p style={{display: "flex", alignItems: "center", gap: "0.4rem"}}>
       {text}
       {linkText &&
-        <Link to={link} style={{textDecoration: "none", color: "#FFD026"}}>
+        <Link
+          to={link}
+          style={{
+            textDecoration: "none",
+            color: "#FFD026"
+          }}>
           {linkText}
         </Link>
       }
