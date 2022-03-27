@@ -129,7 +129,7 @@ const Home = () => {
       <div style={{ display: "flex", gap: "0.6rem" }}>
         <Button as={Link} to="/signup" style={{ zIndex: "100", }}>Sign Up</Button>
         <Button as={Link} to="/login" style={{ zIndex: "100", }}>Log In</Button>
-        {user.isLoggedIn && <Button as={Link} to={`/${user.username}`} style={{ zIndex: "100", }}>My Profile</Button>}
+        {user.isLoggedIn && <Button as={Link} to="/profile" style={{ zIndex: "100", }}>My Profile</Button>}
       </div>
     </StyledHome>
   )
