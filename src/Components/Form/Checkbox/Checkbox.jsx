@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
 import HelpLink from '../../HelpLink';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 
@@ -39,8 +39,8 @@ const Checkbox = ({ id, text, linkText, link, ...props }) => {
 }
 
 Checkbox.defaultProps = {
-  linkText: '',
-  link: '',
+  linkText: "",
+  link: "",
 }
 
 Checkbox.propTypes = {

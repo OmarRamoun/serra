@@ -82,7 +82,7 @@ Field.defaultProps = {
 
 Field.propTypes = {
   fieldType: PropTypes.string,
-  valid: PropTypes.bool,
+  valid: PropTypes.any,
 }
 
 export default Field;
