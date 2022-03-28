@@ -1,5 +1,5 @@
-import Checkbox from "./Checkbox";
-import { useSignup } from "../../../Contexts/SignupContext";
+import Checkbox from './Checkbox';
+import { useSignup } from '../../../Hooks/contextHooks';
 
 const CheckboxContainer = () => {
 

@@ -1,80 +1,47 @@
+import Account from '../Api/Account';
 import { login, logout } from '../features/user';
-import useFormChangeHandler from '../Hooks/useFormChangeHandler';
-import { useState, createContext, useRef, useContext, useEffect } from "react";
-import { useDispatch } from 'react-redux';
-import axios from '../Api/axios';
+import { useForm } from '../Hooks/formHooks';
+
+import { useState, createContext, useRef, useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 
 const LoginContext = createContext({});
-const LOGIN_URL = '/login';
-const LOGOUT_URL = '/logout';
-const READ_URL = '/read';
-
-export const useLogin = () => {
-  return useContext(LoginContext);
-};
 
 export const LoginContextProvider = ({ children }) => {
 
-  const user = useSelector((state) => state.user.value);
-
+  const user = useSelector(state => state.user.value);
   const dispatch = useDispatch();
-  const errRef = useRef(null);
   const navigate = useNavigate();
+  const errMsgRef = useRef(null);
 
-  const [loginForm, setLoginForm] = useState({
+  const [ loginForm, handleChange, resetForm, getValue ] = useForm({
     currentEmail: { fieldValue: "" },
     currentPassword: { fieldValue: "" }
   });
   const [errMsg, setErrMsg] = useState("");
   const [loginSuccess, setLoginSuccess] = useState(false);
 
-  const handleFormChange = useFormChangeHandler(setLoginForm);
+  const currentEmail = getValue("currentEmail");
+  const currentPassword = getValue("currentPassword");
+
 
   useEffect(() => {
     setErrMsg("");
   }, [loginForm])
 
   const handleLoginValueChange = event => {
-    handleFormChange(event, "fieldValue", event.target.value);
+    handleChange(event, "fieldValue", event.target.value);
   };
-
-  const clearLoginForm = () => {
-    setLoginForm({
-      currentEmail: { fieldValue: "" },
-      currentPassword: { fieldValue: "" }
-    });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(LOGIN_URL,
-        JSON.stringify({
-          email: loginForm.currentEmail.fieldValue,
-          password: loginForm.currentPassword.fieldValue
-        })
-      );
-      const sessionId = response?.data?.session?.id;
-      let readResponse = await axios.post(READ_URL,
-        JSON.stringify({
-          email: loginForm.currentEmail.fieldValue,
-        })
-      );
-      const { username, profile } = readResponse.data.account;
-      const currentUser = {
-        email: loginForm.currentEmail.fieldValue,
-        username,
-        sessionId,
-        newsletter: Boolean(profile.newsletter)
-      };
-      dispatch(login({...currentUser}));
-      clearLoginForm();
+      const currentUser = await Account.login(currentEmail, currentPassword);
+      dispatch(login({ ...currentUser }));
+      resetForm();
       setLoginSuccess(true);
-      localStorage.setItem('user', JSON.stringify({...currentUser, isLoggedIn: true}));
       navigate('/profile');
     } catch (err) {
       if (!err?.response) {
@@ -84,19 +51,13 @@ export const LoginContextProvider = ({ children }) => {
       } else {
         setErrMsg('Wrong Email or Password');
       }
-      errRef.current.focus();
+      errMsgRef.current.focus();
     }
   };
-
   const handleLogout = async (e) => {
     try {
-      const response = await axios.post(LOGOUT_URL,
-        JSON.stringify({
-          sessionId: user.sessionId
-        })
-      );
+      await Account.logout({ sessionId: user.sessionId });
       dispatch(logout());
-      localStorage.removeItem('user');
       navigate('/');
     } catch (err) {
       if (!err?.response) {
@@ -104,20 +65,22 @@ export const LoginContextProvider = ({ children }) => {
       } else {
         setErrMsg('Refresh Page');
       }
-      errRef.current.focus();
+      errMsgRef.current.focus();
     }
   };
+
 
   return (
     <LoginContext.Provider value={
       {
-        loginForm,
+        email: currentEmail,
+        password: currentPassword,
         handleLoginValueChange,
         loginSuccess,
         handleSubmit,
         handleLogout,
         errMsg,
-        errRef
+        errMsgRef
       }
     }>
       {children}

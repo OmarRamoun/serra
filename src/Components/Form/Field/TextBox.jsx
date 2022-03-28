@@ -1,7 +1,6 @@
-import { useContext, forwardRef, useState } from "react";
-import { useLogin } from '../../../Contexts/LoginContext';
-import { useSignup } from '../../../Contexts/SignupContext';
-import Icon from './Icon';
+import { forwardRef, useState } from "react";
+import { useLogin, useSignup } from "../../../Hooks/contextHooks";
+import Icon from "./Icon";
 
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -53,7 +52,6 @@ const TextBox = forwardRef((
   const innerProps = validate && {
     onFocus: e => handleSignupFocusChange(e, true),
     onBlur:  e => handleSignupFocusChange(e, false),
-    ref: ref
   };
 
   return (
@@ -65,6 +63,7 @@ const TextBox = forwardRef((
         name={id}
         type={showPass ? "text" : type}
         placeholder={title}
+        ref={ref}
         onChange={
           validate ?
             handleSignupValueChange :

@@ -1,7 +1,7 @@
-import { useSignup } from '../../../Contexts/SignupContext';
+import { useSignup } from "../../../Hooks/contextHooks";
 
-import { FaCheck, FaTimes } from 'react-icons/fa';
-import styled from 'styled-components';
+import { FaCheck, FaTimes } from "react-icons/fa";
+import styled from "styled-components";
 
 
 const Container = styled.div``;
@@ -14,6 +14,7 @@ const StyledP = styled.p`
 
   > :first-child {
     margin-top: 0.1rem;
+    flex: 0 0 1rem;
   }
 `;
 
@@ -50,9 +51,10 @@ const PasswordValidationNote = () => {
       <StyledP>
         {valid.specialChar ? <CheckIcon /> : <TimesIcon />}
         The password must contain at least 1 special character.
+        Allowed special characters:
       </StyledP>
       <StyledP>
-        {!valid.noSpace ? <CheckIcon /> : <TimesIcon />}
+        {valid.noSpace ? <CheckIcon /> : <TimesIcon />}
         The password must not contain any spaces.
       </StyledP>
     </Container>
@@ -60,5 +62,3 @@ const PasswordValidationNote = () => {
 }
 
 export default PasswordValidationNote;
-
-/* Allowed special characters: <span aria-label="exclamation mark">!</span> <span aria-label="at symbol">@</span> <span aria-label="hashtag">#</span> <span aria-label="dollar sign">$</span> <span aria-label="percent">%</span> */

@@ -6,9 +6,10 @@ import CheckboxContainer from '../Components/Form/Checkbox/CheckboxContainer';
 import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
-
-import { useSignup } from '../Contexts/SignupContext';
+import { useSignup } from '../Hooks/contextHooks';
+import { getFieldProps } from '../Hooks/formHooks';
 import { FlexCenter } from '../Styles/Flex.styles';
+
 // import useField from '../Hooks/useField';
 import styled from 'styled-components';
 
@@ -35,21 +36,12 @@ const Signup = () => {
 
   const { username, newEmail, newPassword, confirmPassword } = signupForm;
 
-  const getFieldProps = (field, fieldAriaText) => ({
-    validate: true,
-    value: field.fieldValue,
-    valid: field.valid,
-    focus: field.focus,
-    "aria-invalid": !field.valid,
-    "aria-describedby": fieldAriaText + "-error-msg",
-    ariaId: fieldAriaText + "-error-msg"
-  });
-
   const usernameFieldProps = getFieldProps(username, "username");
   const emailFieldProps = getFieldProps(newEmail, "new-email");
   const passwordFieldProps = getFieldProps(newPassword, "new-password");
   const confirmPasswordFieldProps = getFieldProps(confirmPassword, "confirm-password");
 
+  // {/* validate prop determins to validate (in case of signup) or not to validate (in case of login) */}
   return (
     <Container>
       {

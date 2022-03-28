@@ -1,9 +1,9 @@
 import { SignupContextProvider } from "../Contexts/SignupContext";
 
-const LoginWrapper = ({ component: Component }) => {
+const LoginWrapper = ({ element }) => {
   return (
     <SignupContextProvider>
-      <Component />
+      {element}
     </SignupContextProvider>
   )
 };

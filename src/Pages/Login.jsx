@@ -3,8 +3,7 @@ import Form from '../Components/Form/Form.styles';
 import Field from '../Components/Form/Field/Field';
 import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
-import SuccessLogin from './SuccessLogin';
-import { useLogin } from '../Contexts/LoginContext';
+import { useLogin } from '../Hooks/contextHooks';
 import ErrorBox from '../Components/Form/ErrorBox';
 import { FlexCenter } from '../Styles/Flex.styles';
 
@@ -24,22 +23,18 @@ const FormSection = styled.section`
 const Login = () => {
 
   const {
-    loginSuccess,
-    loginForm,
+    email,
+    password,
     handleSubmit,
     errMsg,
-    errRef
+    errMsgRef
   } = useLogin();
-  const {
-    currentEmail: { fieldValue: email },
-    currentPassword: { fieldValue: password }
-  } = loginForm;
 
 
   return (
     <Container>
       <Form onSubmit={handleSubmit}>
-        <ErrorBox ref={errRef} errMsg={errMsg} />
+        <ErrorBox ref={errMsgRef} errMsg={errMsg} />
 
         <Heading>login</Heading>
 

@@ -1,10 +1,9 @@
-// add a glassmorphic div to the Home component with cool colors
 import home from '../Assets/Images/home-bg.jpg';
 import Button from '../Components/Button';
 
-import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 const StyledHome = styled.div`
   position: relative;
@@ -120,7 +119,7 @@ const StyledHome = styled.div`
 
 const Home = () => {
 
-  const user = useSelector((state) => state.user.value);
+  const user = useSelector(state => state.user.value);
 
   return (
     <StyledHome>

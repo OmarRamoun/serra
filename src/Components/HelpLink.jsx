@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const HelpLink = ({ text, linkText, link }) => {
   return (
@@ -20,8 +20,8 @@ const HelpLink = ({ text, linkText, link }) => {
 }
 
 HelpLink.defaultProps = {
-  linkText: '',
-  link: '',
+  linkText: "",
+  link: "",
 }
 
 HelpLink.propTypes = {

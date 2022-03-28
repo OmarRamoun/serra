@@ -60,7 +60,7 @@ const Field = forwardRef(({ fieldType, valid, ...props }, ref) => {
   }
 
   return (
-    <>
+    <div>
       <Input {...inputProps} {...props} />
       {props.validate &&
         <ValidationNote
@@ -71,16 +71,18 @@ const Field = forwardRef(({ fieldType, valid, ...props }, ref) => {
           focus={props.focus}
         />
       }
-    </>
+    </div>
   )
 });
 
 Field.defaultProps = {
   fieldType: "username",
+  valid: false,
 };
 
 Field.propTypes = {
   fieldType: PropTypes.string,
+  valid: PropTypes.any,
 }
 
 export default Field;
