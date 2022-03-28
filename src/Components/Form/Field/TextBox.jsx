@@ -21,7 +21,6 @@ const StyledInput = styled.input`
   border-radius: 1px;
   outline: none;
   color: #fff;
-  ${({ validate }) => console.log(validate)};
   background: ${({ valid, value, focus, validate }) => validate && !valid && value && !focus ? `#f04a4a4c` : `rgba(0,0,0,0.5)`};
   font-family: ${({ theme }) => theme.fonts.secondary};
   font-weight: ${({ theme }) => theme.fontWeights.regular};
