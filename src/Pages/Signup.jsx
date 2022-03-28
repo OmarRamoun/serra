@@ -6,9 +6,9 @@ import CheckboxContainer from '../Components/Form/Checkbox/CheckboxContainer';
 import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
-
-import { useSignup } from '../Contexts/SignupContext';
+import { useSignup } from '../Hooks/contextHooks';
 import { FlexCenter } from '../Styles/Flex.styles';
+
 // import useField from '../Hooks/useField';
 import styled from 'styled-components';
 

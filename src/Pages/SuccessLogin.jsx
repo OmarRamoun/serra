@@ -1,7 +1,7 @@
 import HelpLink from "../Components/HelpLink";
 import Button from "../Components/Button";
 import ErrorBox from "../Components/Form/ErrorBox";
-import { useLogin } from "../Contexts/LoginContext";
+import { useLogin } from "../Hooks/contextHooks";
 
 import { useSelector } from "react-redux";
 import styled from 'styled-components';

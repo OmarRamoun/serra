@@ -3,8 +3,7 @@ import Form from '../Components/Form/Form.styles';
 import Field from '../Components/Form/Field/Field';
 import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
-import SuccessLogin from './SuccessLogin';
-import { useLogin } from '../Contexts/LoginContext';
+import { useLogin } from '../Hooks/contextHooks';
 import ErrorBox from '../Components/Form/ErrorBox';
 import { FlexCenter } from '../Styles/Flex.styles';
 
@@ -24,7 +23,6 @@ const FormSection = styled.section`
 const Login = () => {
 
   const {
-    loginSuccess,
     loginForm,
     handleSubmit,
     errMsg,

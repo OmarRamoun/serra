@@ -1,7 +1,7 @@
-import { useSignup } from '../../../Contexts/SignupContext';
+import { useSignup } from "../../../Hooks/contextHooks";
 
-import { FaCheck, FaTimes } from 'react-icons/fa';
-import styled from 'styled-components';
+import { FaCheck, FaTimes } from "react-icons/fa";
+import styled from "styled-components";
 
 
 const Container = styled.div``;
