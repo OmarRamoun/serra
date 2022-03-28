@@ -8,12 +8,12 @@ const initialValue = {
   sessionId: "",
 };
 
-const storage = localStorage.getItem("user");
+const storage = JSON.parse(localStorage.getItem("user"));
 
 export const userSlice = createSlice({
   name: "user",
   initialState: {
-    value: storage ? JSON.parse(storage) : initialValue,
+    value: storage || initialValue,
   },
   reducers: {
     signup: (state, action) => {
