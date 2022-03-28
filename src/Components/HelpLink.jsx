@@ -1,21 +1,33 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+
+
+const Container = styled.div`
+  a {
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.primary};
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: #f1ff26;
+      text-shadow: 0 6px 8px #f1ff26;
+    }
+  }
+`;
 
 const HelpLink = ({ text, linkText, link }) => {
   return (
-    <p style={{display: "flex", alignItems: "center", gap: "0.4rem"}}>
+    <Container>
       {text}
       {linkText &&
-        <Link
-          to={link}
-          style={{
-            textDecoration: "none",
-            color: "#FFD026"
-          }}>
+        <Link to={link} >
           {linkText}
         </Link>
       }
-    </p>
+    </Container>
   )
 }
 

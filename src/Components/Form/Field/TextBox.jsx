@@ -1,6 +1,7 @@
 import { forwardRef, useState } from "react";
 import { useLogin, useSignup } from "../../../Hooks/contextHooks";
 import Icon from "./Icon";
+import { ThinBorder } from "../../../Styles/Layout.styles";
 
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -9,20 +10,21 @@ import styled from 'styled-components';
 const Container = styled.div`
   display: flex;
   height: 1.8rem;
-  border-bottom: 1px solid rgba(125, 125, 140, 0.5);
+  border-bottom: ${ThinBorder} rgba(125, 125, 140, 0.5);
 `;
 
 const StyledInput = styled.input`
   flex: 1;
-  border: none;
-  outline: none;
-  border-radius: 1px;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  border: none;
+  border-radius: 1px;
+  outline: none;
   color: #fff;
-  background: ${({ valid, value, focus, validate }) => validate && !valid && value && !focus ? `rgba(255,0,0,0.3)` : `rgba(0,0,0,0.5)`};
-  font-family: 'Exo 2' , sans-serif;
-  font-weight: 400;
+  ${({ validate }) => console.log(validate)};
+  background: ${({ valid, value, focus, validate }) => validate && !valid && value && !focus ? `#f04a4a4c` : `rgba(0,0,0,0.5)`};
+  font-family: ${({ theme }) => theme.fonts.secondary};
+  font-weight: ${({ theme }) => theme.fontWeights.regular};
   font-size: 0.9rem;
 
   &:focus ~ img {
@@ -58,6 +60,7 @@ const TextBox = forwardRef((
     <Container>
       <Icon type={type} />
       <StyledInput
+        validate={validate}
         autoComplete={id}
         id={id}
         name={id}

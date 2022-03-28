@@ -1,23 +1,10 @@
 import Heading from '../Components/Heading.styles';
-import Form from '../Components/Form/Form.styles';
 import Field from '../Components/Form/Field/Field';
 import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import { useLogin } from '../Hooks/contextHooks';
 import ErrorBox from '../Components/Form/ErrorBox';
-import { FlexCenter } from '../Styles/Flex.styles';
-
-import styled from 'styled-components';
-
-
-const Container = styled.article`
-  ${FlexCenter};
-  flex: 1;
-`;
-
-const FormSection = styled.section`
-  min-width: 100%;
-`;
+import { Container, FormSection, Form } from '../Components/Form/Form.styles';
 
 
 const Login = () => {

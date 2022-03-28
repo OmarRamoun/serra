@@ -1,21 +1,28 @@
 import PasswordValidationNote from './PasswordValidation';
 
 import { FaInfoCircle } from 'react-icons/fa';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types'
 
 
 const Container = styled.div`
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex: 1;
   background: linear-gradient(
     to bottom right,
     rgba(17, 30, 49, 0.3),
     rgba(17, 30, 49, 0.5)
   );
   backdrop-filter: blur(10px);
-  font-weight: 400;
-  padding: 20px;
-  display: flex;
-  flex: 1;
+  font-weight: ${({ theme }) => theme.fontWeights.regular};
+
+  ${({showNote}) => !showNote && css`
+    height: 0px;
+    padding: 0px;
+    opacity: 0;
+  `}
 `;
 
 const InnerWrapper = styled.div`
@@ -32,11 +39,7 @@ const ValidationNote = ({
 
   return (
     <Container
-      style={
-        showNote ?
-          { position: "relative" } :
-          { position: "relative", left: "-9999px", height: "0px", padding: "0" }
-      }
+      showNote={showNote}
     >
       <InnerWrapper
         id={ariaId}
@@ -46,9 +49,9 @@ const ValidationNote = ({
           (<>
             <FaInfoCircle />
             Username is required and:<br />
-            ⚪ Must be between 3 and 20 characters.<br />
-            ⚪ Must begin with a letter.<br />
-            ⚪ Letters, numbers, underscores, hyphens allowed.
+            - Must be between 3 and 20 characters.<br />
+            - Must begin with a letter.<br />
+            - Letters, numbers, underscores, hyphens allowed.
           </>
           )
         }
