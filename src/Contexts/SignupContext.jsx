@@ -1,5 +1,5 @@
-import Account from "../Api/Account";
-import { useState, useEffect, createContext, useRef } from "react";
+import Account from '../Api/Account';
+import { useState, useEffect, createContext, useRef } from 'react';
 import { USERNAME_REGEX, EMAIL_REGEX } from '../Validations/regex';
 import { useForm, usePasswordRegex } from "../Hooks/formHooks";
 

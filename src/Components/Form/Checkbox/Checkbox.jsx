@@ -11,6 +11,16 @@ const StyledCheckbox = styled.div`
   font-weight: 400;
   letter-spacing: 0.5px;
   text-shadow: rgb(12 11 19) 2px 2px 4px;
+
+  ${({ theme }) => theme.media.tablet} {
+    gap: 0.9rem;
+    input {
+      flex: 0 0 1.7rem;
+      padding: 1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 `;
 
 const Checkbox = ({ id, text, linkText, link, ...props }) => {
@@ -21,11 +31,6 @@ const Checkbox = ({ id, text, linkText, link, ...props }) => {
         id={id}
         name={id}
         {...props}
-        style={{
-          padding: "1rem",
-          width: "0.9rem",
-          height: "0.9rem",
-        }}
       />
       <label htmlFor={id}>
         <HelpLink

@@ -1,5 +1,4 @@
 import SuccessSignup from './SuccessSignup';
-import Form from '../Components/Form/Form.styles';
 import Heading from '../Components/Heading.styles';
 import Field from '../Components/Form/Field/Field';
 import CheckboxContainer from '../Components/Form/Checkbox/CheckboxContainer';
@@ -8,20 +7,8 @@ import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
 import { useSignup } from '../Hooks/contextHooks';
 import { getFieldProps } from '../Hooks/formHooks';
-import { FlexCenter } from '../Styles/Flex.styles';
+import { Container, FormSection, Form } from '../Components/Form/Form.styles';
 
-// import useField from '../Hooks/useField';
-import styled from 'styled-components';
-
-
-const Container = styled.article`
-  ${FlexCenter}
-  flex: 1;
-`;
-
-const FormSection = styled.section`
-  min-width: 100%;
-`;
 
 const Signup = () => {
 

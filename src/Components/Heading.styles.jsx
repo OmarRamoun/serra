@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 const Heading = styled.h1`
-  font-family: 'Nova Flat', cursive, sans-serif;
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 2.8rem;
   margin-bottom: 1.6rem;
   text-transform: uppercase;

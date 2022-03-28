@@ -31,7 +31,6 @@ const Field = forwardRef(({ fieldType, valid, ...props }, ref) => {
         title: "Password",
         id: "newPassword",
       }
-      console.log("result", valid.result);
       valid = valid.result;
       break;
     case "current-pass":
