@@ -46,9 +46,9 @@ const ValidationNote = ({
           (<>
             <FaInfoCircle />
             Username is required and:<br />
-            - Must be between 3 and 20 characters.<br />
-            - Must begin with a letter.<br />
-            - Letters, numbers, underscores, hyphens allowed.
+            ⚪ Must be between 3 and 20 characters.<br />
+            ⚪ Must begin with a letter.<br />
+            ⚪ Letters, numbers, underscores, hyphens allowed.
           </>
           )
         }

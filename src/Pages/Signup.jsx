@@ -7,6 +7,7 @@ import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
 import { useSignup } from '../Hooks/contextHooks';
+import { getFieldProps } from '../Hooks/formHooks';
 import { FlexCenter } from '../Styles/Flex.styles';
 
 // import useField from '../Hooks/useField';
@@ -34,16 +35,6 @@ const Signup = () => {
   } = useSignup();
 
   const { username, newEmail, newPassword, confirmPassword } = signupForm;
-
-  const getFieldProps = (field, fieldAriaText) => ({
-    validate: true,
-    value: field.fieldValue,
-    valid: field.valid,
-    focus: field.focus,
-    "aria-invalid": !field.valid,
-    "aria-describedby": fieldAriaText + "-error-msg",
-    ariaId: fieldAriaText + "-error-msg"
-  });
 
   const usernameFieldProps = getFieldProps(username, "username");
   const emailFieldProps = getFieldProps(newEmail, "new-email");

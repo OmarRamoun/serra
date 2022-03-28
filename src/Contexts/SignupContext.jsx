@@ -1,8 +1,7 @@
 import Account from "../Api/Account";
 import { useState, useEffect, createContext, useRef } from "react";
-import { USERNAME_REGEX, EMAIL_REGEX, PASSWORD_REGEX } from '../Validations/regex';
-import { useForm } from "../Hooks/useForm";
-// import { useAuth } from '../Hooks/useAuth';
+import { USERNAME_REGEX, EMAIL_REGEX } from '../Validations/regex';
+import { useForm, usePasswordRegex } from "../Hooks/formHooks";
 
 
 const SignupContext = createContext({});
@@ -17,7 +16,7 @@ export const SignupContextProvider = ({ children }) => {
     valid: false,
     focus: false
   };
-  const [ signupForm, handleChange, resetForm, validateForm ] = useForm({
+  const [ signupForm, handleChange, resetForm, getValue, setFieldValid ] = useForm({
     username: { ...initialValue, focus: true },
     newEmail: { ...initialValue },
     newPassword: {
@@ -38,11 +37,13 @@ export const SignupContextProvider = ({ children }) => {
   const [errMsg, setErrMsg] = useState("");
   const [signupSuccess, setSignupSuccess] = useState(false);
 
-  const getValue = field => signupForm[field].fieldValue;
   const username = getValue("username");
   const newEmail = getValue("newEmail");
   const newPassword = getValue("newPassword");
+  const confirmPassword = getValue("confirmPassword");
   const newsletter = signupForm.newsletter;
+
+  const passwordRegex = usePasswordRegex(newPassword);
 
   useEffect(() => {
     usernameRef.current.focus();
@@ -51,43 +52,21 @@ export const SignupContextProvider = ({ children }) => {
     setErrMsg("");
   }, [signupForm]);
   useEffect(() => {
-    const result = USERNAME_REGEX.test(signupForm.username.fieldValue);
-    validateForm("username", result);
+    const result = USERNAME_REGEX.test(username);
+    setFieldValid("username", result);
     /* eslint-disable-next-line */
-  }, [signupForm.username.fieldValue]);
+  }, [username]);
   useEffect(() => {
-    const result = EMAIL_REGEX.test(signupForm.newEmail.fieldValue);
-    validateForm("newEmail", result);
+    const result = EMAIL_REGEX.test(newEmail);
+    setFieldValid("newEmail", result);
     /* eslint-disable-next-line */
-  }, [signupForm.newEmail.fieldValue]);
+  }, [newEmail]);
   useEffect(() => {
-    const lengthResult = PASSWORD_REGEX.length.test(signupForm.newPassword.fieldValue);
-    const uppercaseResult = PASSWORD_REGEX.uppercase.test(signupForm.newPassword.fieldValue);
-    const lowercaseResult = PASSWORD_REGEX.lowercase.test(signupForm.newPassword.fieldValue);
-    const digitsResult = PASSWORD_REGEX.digits.test(signupForm.newPassword.fieldValue);
-    const specialCharResult = PASSWORD_REGEX.specialChar.test(signupForm.newPassword.fieldValue);
-    const noSpaceResult = PASSWORD_REGEX.noSpace.test(signupForm.newPassword.fieldValue);
-    const result = lengthResult && uppercaseResult && lowercaseResult && digitsResult && specialCharResult && !noSpaceResult;
-
-    const passwordValidations = {
-      length: lengthResult,
-      uppercase: uppercaseResult,
-      lowercase: lowercaseResult,
-      digits: digitsResult,
-      specialChar: specialCharResult,
-      noSpace: noSpaceResult,
-      result: result
-    }
-
-    validateForm("newPassword", passwordValidations);
-
-    const match = signupForm.newPassword.fieldValue === signupForm.confirmPassword.fieldValue;
-    validateForm("confirmPassword", result && match);
+    setFieldValid("newPassword", passwordRegex);
+    const match = newPassword === confirmPassword;
+    setFieldValid("confirmPassword", passwordRegex.result && match);
     /* eslint-disable-next-line */
-  }, [
-    signupForm.newPassword.fieldValue,
-    signupForm.confirmPassword.fieldValue,
-  ]);
+  }, [newPassword, confirmPassword]);
 
   const handleSignupFocusChange = (event, value) => {
     handleChange(event, "focus", value);

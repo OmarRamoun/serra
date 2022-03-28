@@ -54,7 +54,7 @@ const PasswordValidationNote = () => {
         Allowed special characters:
       </StyledP>
       <StyledP>
-        {!valid.noSpace ? <CheckIcon /> : <TimesIcon />}
+        {valid.noSpace ? <CheckIcon /> : <TimesIcon />}
         The password must not contain any spaces.
       </StyledP>
     </Container>

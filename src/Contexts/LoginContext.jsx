@@ -1,7 +1,6 @@
 import Account from '../Api/Account';
-
 import { login, logout } from '../features/user';
-import { useForm } from '../Hooks/useForm';
+import { useForm } from '../Hooks/formHooks';
 
 import { useState, createContext, useRef, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,20 +11,20 @@ const LoginContext = createContext({});
 
 export const LoginContextProvider = ({ children }) => {
 
-  const user = useSelector((state) => state.user.value);
+  const user = useSelector(state => state.user.value);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const errMsgRef = useRef(null);
 
-  const [ loginForm, handleChange, resetForm ] = useForm({
+  const [ loginForm, handleChange, resetForm, getValue ] = useForm({
     currentEmail: { fieldValue: "" },
     currentPassword: { fieldValue: "" }
   });
   const [errMsg, setErrMsg] = useState("");
   const [loginSuccess, setLoginSuccess] = useState(false);
 
-  const currentEmail = loginForm.currentEmail.fieldValue;
-  const currentPassword = loginForm.currentPassword.fieldValue;
+  const currentEmail = getValue("currentEmail");
+  const currentPassword = getValue("currentPassword");
 
 
   useEffect(() => {
@@ -74,13 +73,14 @@ export const LoginContextProvider = ({ children }) => {
   return (
     <LoginContext.Provider value={
       {
-        loginForm,
+        email: currentEmail,
+        password: currentPassword,
         handleLoginValueChange,
         loginSuccess,
         handleSubmit,
         handleLogout,
         errMsg,
-        errRef: errMsgRef
+        errMsgRef
       }
     }>
       {children}

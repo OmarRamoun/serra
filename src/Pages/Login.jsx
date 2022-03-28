@@ -23,21 +23,18 @@ const FormSection = styled.section`
 const Login = () => {
 
   const {
-    loginForm,
+    email,
+    password,
     handleSubmit,
     errMsg,
-    errRef
+    errMsgRef
   } = useLogin();
-  const {
-    currentEmail: { fieldValue: email },
-    currentPassword: { fieldValue: password }
-  } = loginForm;
 
 
   return (
     <Container>
       <Form onSubmit={handleSubmit}>
-        <ErrorBox ref={errRef} errMsg={errMsg} />
+        <ErrorBox ref={errMsgRef} errMsg={errMsg} />
 
         <Heading>login</Heading>
 
