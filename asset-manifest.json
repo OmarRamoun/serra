@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/MrRamoun/serra/static/css/main.7d40bf6a.css",
+    "main.js": "/MrRamoun/serra/static/js/main.5cea040e.js",
+    "static/media/cards.png": "/MrRamoun/serra/static/media/cards.a4910af48fa4c0d8c427.png",
+    "static/media/home-bg.jpg": "/MrRamoun/serra/static/media/home-bg.0c834e16fee6f8420a56.jpg",
+    "static/media/bg.jpg": "/MrRamoun/serra/static/media/bg.6eac6b868271812b1e5d.jpg",
+    "static/media/logo.png": "/MrRamoun/serra/static/media/logo.c4f3f0359dcde55abd1c.png",
+    "static/media/mail.svg": "/MrRamoun/serra/static/media/mail.def76272ea2674f2ea55710f1c92e706.svg",
+    "static/media/eye.svg": "/MrRamoun/serra/static/media/eye.0af0e22e9fb05971f94b588163ae306c.svg",
+    "index.html": "/MrRamoun/serra/index.html",
+    "static/media/lock.svg": "/MrRamoun/serra/static/media/lock.a419970dc113e83058997e307226d49c.svg",
+    "static/media/user.svg": "/MrRamoun/serra/static/media/user.8c6b4c744c575cee11f539774051347a.svg",
+    "main.7d40bf6a.css.map": "/MrRamoun/serra/static/css/main.7d40bf6a.css.map",
+    "main.5cea040e.js.map": "/MrRamoun/serra/static/js/main.5cea040e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7d40bf6a.css",
+    "static/js/main.5cea040e.js"
+  ]
+}
