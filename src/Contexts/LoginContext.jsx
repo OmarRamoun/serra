@@ -48,8 +48,12 @@ export const LoginContextProvider = ({ children }) => {
         setErrMsg('No Server Response');
       } else if (err.response?.status === 400) {
         setErrMsg('Missing Username or Password');
-      } else {
+      } else if (err.response?.status === 401) {
         setErrMsg('Wrong Email or Password');
+      } else if (err.response?.status === 500) {
+        setErrMsg('User Not Found');
+      } else {
+        setErrMsg('Something Went Wrong');
       }
       errMsgRef.current.focus();
     }
