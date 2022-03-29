@@ -5,6 +5,7 @@ import CheckboxContainer from '../Components/Form/Checkbox/CheckboxContainer';
 import Button from '../Components/Button';
 import HelpLink from '../Components/HelpLink';
 import ErrorBox from '../Components/Form/ErrorBox';
+import Qa from '../Components/Qa';
 import { useSignup } from '../Hooks/contextHooks';
 import { getFieldProps } from '../Hooks/formHooks';
 import { Container, FormSection, Form } from '../Components/Form/Form.styles';
@@ -84,6 +85,7 @@ const Signup = () => {
             </Form>
           )
       }
+      <Qa />
     </Container>
   );
 };
