@@ -14,14 +14,6 @@
 
 ![screenshot](screenshot.png)
 
-## Watch This First
-
-[click on this link to watch a walk through of the app]()
-
-## Live Demo
-
-[Live Demo Link](https://synergyofserra.com)
-
 ## Built With
 
 - Languages: _**HTML5/Semantics, CSS3/SASS, JS/ES6**_
@@ -33,7 +25,6 @@
 1. Finish Project MVP
 2. Refine and refactor until satisfied (mabye ;) )
 3. add prototypes, component structure, and update readme
-4. add a video for representing what have been done
 
 ## Project Life Cycle
 
@@ -44,11 +35,11 @@
 4. Accessibility
 5. Testing
 6. Documentation
-7. git
+7. Deployment
 
 ## Authors
 
-👤 **Author1**
+👤 **Ramoun**
 
 - **GitHub**: [![@mrramoun](https://img.shields.io/github/followers/MrRamoun?label=Ramoun&style=social)](https://github.com/mrramoun)
 - **Twitter**: [![@ramoun16](https://img.shields.io/twitter/follow/ramoun16?label=ramoun16&style=social)](https://twitter.com/ramoun16)
@@ -70,3 +61,6 @@ Give a ⭐️ if you like this project!
 - My Passion For Computers & TCG
 - [M3O](http://m3o.com/) for their great API.
 
+## Special Thanks to Julian
+
+Really thank you for this great game

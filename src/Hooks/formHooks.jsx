@@ -1,4 +1,4 @@
-import { PASSWORD_REGEX, EMAIL_REGEX } from '../Validations/regex';
+import { PASSWORD_REGEX } from '../Validations/regex';
 import { useState } from 'react';
 
 export const useForm = (initialForm) => {
