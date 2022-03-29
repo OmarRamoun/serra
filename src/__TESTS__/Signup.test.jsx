@@ -12,17 +12,19 @@ test('on render the signup button will be disabled. if all fields are filled cor
   expect(screen.getByRole('button', { name: /Sign Up/i })).toBeDisabled();
 
   // fill the username field with correct data
-  userEvent.type(screen.getByPlaceholderText('Username'), 'PromoA');
+  userEvent.type(screen.getByTestId("username"), 'PromoA');
 
   // fill the E-Mail Address field with correct data
-  userEvent.type(screen.getByPlaceholderText('E-Mail Address'), 'promoA@synergy.com');
+  userEvent.type(screen.getByTestId("new-email"), 'promoA@synergy.com');
 
   // fill the Password field with correct data
-  userEvent.type(screen.getAllByPlaceholderText(/Password/i)[0], "promoA@synergy22");
+  userEvent.type(screen.getByTestId("new-password"), "aA1@aA1@");
 
   // fill the Password Confirmation field with correct data
   // screen.getByLabelText(/Confirm Password/i).value = "promoA@synergy22";
-  userEvent.type(screen.getByLabelText(/Confirm Password/i), "promoA@synergy22");
+  userEvent.type(screen.getByTestId("confirm-password"), "aA1@aA1@");
+
+  userEvent.click(screen.getByTestId("terms"));
 
   // check if the signup button is enabled
   expect(screen.getByRole('button', { name: /Sign Up/i })).toBeEnabled();

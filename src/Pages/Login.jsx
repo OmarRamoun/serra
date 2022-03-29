@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     <Container>
-      <Form onSubmit={handleSubmit}>
+      <Form data-testid="login-form" onSubmit={handleSubmit}>
         <ErrorBox ref={errMsgRef} errMsg={errMsg} />
 
         <Heading>login</Heading>

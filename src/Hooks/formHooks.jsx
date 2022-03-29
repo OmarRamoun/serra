@@ -44,7 +44,8 @@ export const getFieldProps = (field, fieldAriaText) => ({
   focus: field.focus,
   "aria-invalid": !field.valid,
   "aria-describedby": fieldAriaText + "-error-msg",
-  ariaId: fieldAriaText + "-error-msg"
+  ariaId: fieldAriaText + "-error-msg",
+  "data-testid": fieldAriaText
 });
 
 export const usePasswordRegex = (password) => {

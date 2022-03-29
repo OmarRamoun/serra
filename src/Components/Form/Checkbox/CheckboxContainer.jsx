@@ -15,6 +15,7 @@ const CheckboxContainer = () => {
       />
       <Checkbox
         id="terms"
+        data-testid="terms"
         text="I read and agree to the"
         linkText="Terms of Service"
         link="#"

@@ -34,12 +34,11 @@ test('on render the login button will be disabled. if all fields are filled, the
   expect(screen.getAllByRole('heading', { name: /signup/i })[0]).toBeInTheDocument();
 });
 
-test('on filling correct data and clicking the login button, should be moved to t profile page', async () => {
+test('on filling correct data and clicking the login button, should be moved to t profile page', () => {
   render (ComponentsArrangement);
 
   // click on the login button
   userEvent.click(screen.getByRole('link', { name: /LOGIN/i }));
-
 
   // fill the E-Mail Address field with real email
   userEvent.type(screen.getByPlaceholderText('E-Mail Address'), 'omartarekramoun@gmail.com');
@@ -49,8 +48,5 @@ test('on filling correct data and clicking the login button, should be moved to 
 
   // click on the login button
   userEvent.click(screen.getByRole('button', { name: /Log In/i }));
-
-  // const linkElement = screen.getByText(/logged In/i);
-  // expect(linkElement).toBeInTheDocument();
 });
 

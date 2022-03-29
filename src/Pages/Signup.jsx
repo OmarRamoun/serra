@@ -21,7 +21,7 @@ const Signup = () => {
     handleSubmit
   } = useSignup();
 
-  const { username, newEmail, newPassword, confirmPassword } = signupForm;
+  const { username, newEmail, newPassword, confirmPassword, terms } = signupForm;
 
   const usernameFieldProps = getFieldProps(username, "username");
   const emailFieldProps = getFieldProps(newEmail, "new-email");
@@ -34,7 +34,7 @@ const Signup = () => {
       {
         signupSuccess ? (<SuccessSignup />)
           : (
-            <Form onSubmit={handleSubmit}>
+            <Form data-testid="signup-form" onSubmit={handleSubmit}>
               <ErrorBox ref={errMsgRef} errMsg={errMsg} />
 
               <Heading>signup</Heading>
@@ -68,7 +68,8 @@ const Signup = () => {
                     username.valid &&
                     newEmail.valid &&
                     newPassword.valid.result &&
-                    confirmPassword.valid
+                    confirmPassword.valid &&
+                    terms
                   )
                 }
               >

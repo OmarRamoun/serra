@@ -17,7 +17,6 @@ export default class Account {
   };
   static login = async (email, password) => {
     const response = await Account.#post(LOGIN_URL, { email, password });
-    console.log("did it reach here");
     const sessionId = response.data.session.id;
     const readData = await Account.getData(email);
     const { username, profile } = readData.account;
