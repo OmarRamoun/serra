@@ -37,9 +37,9 @@ const Logo = styled.img`
 
 const Header = () => {
   return (
-    <StyledHeader>
+    <StyledHeader data-testid="header">
       <Link to="/">
-        <Logo src={logo} alt="Synergy of Serra Logo" />
+        <Logo data-testid="logo" src={logo} alt="Synergy of Serra Logo" />
       </Link>
     </StyledHeader>
   )
