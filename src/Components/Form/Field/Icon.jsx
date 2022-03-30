@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 const StyledIcon = styled.img`
-  max-width: 1.6rem;
+  max-width: 1.7rem;
   padding: 0.2rem 0.4rem;
   ${({type}) => type === 'email' ? 'filter: brightness(0.9)' : 'filter: brightness(0.4)'};
 `;

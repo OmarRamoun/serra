@@ -27,7 +27,7 @@ const Form = styled.form`
   border-bottom: ${ThinBorder} rgba(199, 199, 199, 0.1);
   border-top: ${ThinBorder} rgba(199, 199, 199, 0.1);
   border-radius: 5px;
-  max-width: 480px;
+  width: 480px;
   color: #fff;
   background-color: rgb(12, 11, 19, 0.8);
   backdrop-filter: blur(20px);
@@ -35,6 +35,7 @@ const Form = styled.form`
 
   ${({ theme }) => theme.media.mobile} {
     flex: 1;
+    max-width: 100%;
     border-top: 0;
     border-radius: 0;
     margin-bottom: 0;
