@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 
 
 const Container = styled.div`
-  position: relative;
   padding: 20px;
   display: flex;
   flex: 1;
@@ -19,9 +18,8 @@ const Container = styled.div`
   font-weight: ${({ theme }) => theme.fontWeights.regular};
 
   ${({showNote}) => !showNote && css`
-    height: 0px;
-    padding: 0px;
-    opacity: 0;
+    position: absolute;
+    left: -9999px;
   `}
 `;
 

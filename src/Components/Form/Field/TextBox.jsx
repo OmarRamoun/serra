@@ -9,7 +9,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
-  height: 1.8rem;
+  height: 36px;
   border-bottom: ${ThinBorder} rgba(125, 125, 140, 0.5);
 `;
 

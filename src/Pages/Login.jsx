@@ -55,6 +55,7 @@ const Login = () => {
           link="/signup"
         />
         <HelpLink
+          split
           text="Don't Remember Your Password?"
           linkText="Recover My Password"
           link="#"
