@@ -14,6 +14,10 @@
 
 ![screenshot](screenshot.png)
 
+## A Demo for the App
+
+- [Demo](https://synergy-of-serra.herokuapp.com/)
+
 ## Built With
 
 - Languages: _**HTML5/Semantics, CSS3/SASS, JS/ES6**_
