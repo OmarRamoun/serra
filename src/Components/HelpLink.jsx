@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components';
 
 
 const Container = styled.div`
+  text-align: center;
   ${({ split }) => split && css`
     ${FlexColumn};
     justify-content: center;
