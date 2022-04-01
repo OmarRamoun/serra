@@ -1,5 +1,5 @@
 import './Loader.css';
-import { useRange } from '../Hooks/useRange';
+import { useRange } from '../../Hooks/useRange';
 
 import styled from 'styled-components';
 
@@ -9,7 +9,7 @@ const Container = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background: #37394085;
+  background: #37394032;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 

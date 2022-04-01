@@ -7,9 +7,8 @@ import { Link } from 'react-router-dom';
 const StyledIcon = styled.div`
   ${FlexCenter};
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  margin-right: 1rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
   border-radius: 50%;
   height: 3rem;
   width: 3rem;
