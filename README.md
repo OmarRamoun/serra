@@ -16,10 +16,10 @@
 ## Collective Screenshots of the Mobile Version
 
 <p align="center" justify="center">
-  <img src="screenshots/login.png" />
-  <img src="screenshots/signup.png" />
-  <img src="screenshots/logout.png" />
-  <img src="screenshots/loading.gif" />
+  <img width="180px" height="320px" src="screenshots/login.png" />
+  <img width="180px" height="320px" src="screenshots/signup.png" />
+  <img width="180px" height="320px" src="screenshots/logout.png" />
+  <img width="180px" height="320px" src="screenshots/loading.gif" />
 </p>
 
 ## A Demo for the App
