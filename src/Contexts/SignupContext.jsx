@@ -46,9 +46,6 @@ export const SignupContextProvider = ({ children }) => {
   const passwordRegex = usePasswordRegex(newPassword);
 
   useEffect(() => {
-    usernameRef.current.focus();
-  }, []);
-  useEffect(() => {
     setErrMsg("");
   }, [signupForm]);
   useEffect(() => {

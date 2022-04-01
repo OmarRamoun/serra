@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import Layout from "./Layout";
 import LoginWrapper from "./Pages/LoginContextWrapper";
 import SignupWrapper from "./Pages/SignupContextWrapper";
 import ProtectedRoute from "./Pages/ProtectedRoute";
@@ -7,7 +8,6 @@ import Theme from "./Styles/Theme.styles";
 
 import { Route, Routes } from "react-router-dom";
 
-const Layout = lazy(() => import("./Layout"));
 const Home = lazy(() => import("./Pages/Home"));
 const Signup = lazy(() => import("./Pages/Signup"));
 const Login = lazy(() => import("./Pages/Login"));
