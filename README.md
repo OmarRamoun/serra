@@ -5,14 +5,22 @@
 ![Styled-Components](https://img.shields.io/badge/Styled_Components-fbfbfb?style=for-the-badge&logo=styled-components&logoColor=DB7093)
 ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-
 # Synergy Of Serra
 
 > A "FAN-MADE" Prototype for the Signup & Login of the new outstanding NFT TCG **"Synergy Of Serra"**. You can visit the original website on [this link](https://synergyofserra.com/) (thank me later).
 
 ## A Screenshot of the Homepage
 
-![screenshot](screenshot.png)
+![screenshot](screenshots/screenshot.png)
+
+## Collective Screenshots of the Mobile Version
+
+<p align="center" justify="center">
+  <img src="screenshots/login.png" />
+  <img src="screenshots/signup.png" />
+  <img src="screenshots/logout.png" />
+  <img src="screenshots/loading.gif" />
+</p>
 
 ## A Demo for the App
 
