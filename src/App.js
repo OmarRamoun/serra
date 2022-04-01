@@ -1,36 +1,74 @@
-import Layout from "./Layout";
-import Home from "./Pages/Home";
+import { lazy, Suspense } from "react";
 import LoginWrapper from "./Pages/LoginContextWrapper";
 import SignupWrapper from "./Pages/SignupContextWrapper";
-import Signup from "./Pages/Signup";
-import Login from "./Pages/Login";
 import ProtectedRoute from "./Pages/ProtectedRoute";
-import SuccessLogin from "./Pages/SuccessLogin";
-import NotFoundPage from "./Pages/404";
+import Loader from "./Components/Loader/Loader";
 import Theme from "./Styles/Theme.styles";
 
 import { Route, Routes } from "react-router-dom";
+
+const Layout = lazy(() => import("./Layout"));
+const Home = lazy(() => import("./Pages/Home"));
+const Signup = lazy(() => import("./Pages/Signup"));
+const Login = lazy(() => import("./Pages/Login"));
+const SuccessLogin = lazy(() => import("./Pages/SuccessLogin"));
+const NotFoundPage = lazy(() => import("./Pages/404"));
 
 function App() {
   return (
     <Theme>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/login" element={<LoginWrapper element={<Login />} />} />
+          <Route
+            index
+            element={
+              <Suspense fallback={<Loader />}>
+                <Home />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <Suspense fallback={<Loader />}>
+                <LoginWrapper element={<Login />} />
+              </Suspense>
+            }
+          />
           <Route
             path="/signup"
-            element={<SignupWrapper element={<Signup />} />}
+            element={
+              <Suspense fallback={<Loader />}>
+                <SignupWrapper element={<Signup />} />
+              </Suspense>
+            }
           />
           <Route
             path="/profile"
             element={
-              <ProtectedRoute
-                element={<LoginWrapper element={<SuccessLogin />} />}
-              />
+              <Suspense fallback={<Loader />}>
+                <ProtectedRoute
+                  element={<LoginWrapper element={<SuccessLogin />} />}
+                />
+              </Suspense>
             }
           />
-          <Route path="/*" element={<NotFoundPage />} />
+          <Route
+            path="/loader"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Loader />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/*"
+            element={
+              <Suspense fallback={<Loader />}>
+                <NotFoundPage />
+              </Suspense>
+            }
+          />
         </Route>
       </Routes>
     </Theme>
