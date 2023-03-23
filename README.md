@@ -24,7 +24,7 @@
 
 ## A Demo for the App
 
-- [Demo](https://synergy-of-serra.herokuapp.com/)
+- [Demo](https://serra.omarramoun.com/)
 
 ## Built With
 
@@ -32,30 +32,25 @@
 - Framework: _**React, Redux, Styled-Components, React-Router**_
 - Technologies used: _**GIT, GITHUB, LINTERS**_
 
-## Plan
-
-1. Finish Project MVP
-2. Refine and refactor until satisfied (mabye ;) )
-3. add prototypes, component structure, and update readme
-
 ## Project Life Cycle
 
 0. tools and dependencies
-1. Component structure & organization
-2. Logic & state management
-3. UI Design / Style + (media queries)
-4. Accessibility
-5. Testing
-6. Documentation
-7. Deployment
+1. UI Architecture
+2. Component structure & organization
+3. Logic & state management
+4. Style + (Responsive)
+5. Accessibility
+6. Testing
+7. Documentation
+8. Deployment
 
 ## Authors
 
 👤 **Ramoun**
 
-- **GitHub**: [![@mrramoun](https://img.shields.io/github/followers/MrRamoun?label=Ramoun&style=social)](https://github.com/mrramoun)
-- **Twitter**: [![@ramoun16](https://img.shields.io/twitter/follow/ramoun16?label=ramoun16&style=social)](https://twitter.com/ramoun16)
-- **LinkdIn**: [![@ramoun](https://img.shields.io/github/followers/ramon?label=ramoun&logo=linkedin&style=social)](https://www.linkedin.com/in/ramoun/)
+- **GitHub**: [![@omarramoun](https://img.shields.io/github/followers/MrRamoun?label=Ramoun&style=social)](https://github.com/omarramoun)
+- **Twitter**: [![@omarramoun](https://img.shields.io/twitter/follow/ramoun16?label=ramoun16&style=social)](https://twitter.com/omarramoun)
+- **LinkdIn**: [![@omarramoun](https://img.shields.io/github/followers/ramon?label=ramoun&logo=linkedin&style=social)](https://www.linkedin.com/in/omarramoun/)
 
 ## 🤝 Contributing
 
