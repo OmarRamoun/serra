@@ -48,9 +48,9 @@
 
 👤 **Ramoun**
 
-- **GitHub**: [![@omarramoun](https://img.shields.io/github/followers/MrRamoun?label=Ramoun&style=social)](https://github.com/omarramoun)
-- **Twitter**: [![@omarramoun](https://img.shields.io/twitter/follow/ramoun16?label=ramoun16&style=social)](https://twitter.com/omarramoun)
-- **LinkdIn**: [![@omarramoun](https://img.shields.io/github/followers/ramon?label=ramoun&logo=linkedin&style=social)](https://www.linkedin.com/in/omarramoun/)
+- **GitHub**: [![@omarramoun](https://img.shields.io/github/followers/omarramoun?label=OmarRamoun&style=social)](https://github.com/omarramoun)
+- **Twitter**: [![@omarramoun](https://img.shields.io/twitter/follow/omarramoun?label=OmarRamoun&style=social)](https://twitter.com/omarramoun)
+- **LinkdIn**: [![@omarramoun](https://img.shields.io/github/followers/omarramoun?label=OmarRamoun&logo=linkedin&style=social)](https://www.linkedin.com/in/omarramoun/)
 
 ## 🤝 Contributing
 
