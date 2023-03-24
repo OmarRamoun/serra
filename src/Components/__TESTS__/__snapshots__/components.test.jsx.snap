@@ -1,0 +1,2564 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing components testing Header.jsx 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="sc-dkPtRN iHrXQq"
+      >
+        <header
+          class="sc-bdvvtL RYIYw"
+          data-testid="header"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="Synergy of Serra Logo"
+              class="sc-gsDKAQ dxFEtn"
+              data-testid="logo"
+              src="logo.png"
+            />
+          </a>
+        </header>
+        <div
+          class="sc-hKwDye VyKlp"
+        >
+          <div
+            class="socket"
+          >
+            <div
+              class="gel center-gel"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c1 r1"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c2 r1"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c3 r1"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c4 r1"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c5 r1"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c6 r1"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c7 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c8 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c9 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c10 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c11 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c12 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c13 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c14 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c15 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c16 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c17 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c18 r2"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c19 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c20 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c21 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c22 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c23 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c24 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c25 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c26 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c27 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c28 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c29 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c30 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c31 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c32 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c33 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c34 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c35 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c36 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+            <div
+              class="gel c37 r3"
+            >
+              <div
+                class="hex-brick h1"
+              />
+              <div
+                class="hex-brick h2"
+              />
+              <div
+                class="hex-brick h3"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="sc-dkPtRN iHrXQq"
+    >
+      <header
+        class="sc-bdvvtL RYIYw"
+        data-testid="header"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="Synergy of Serra Logo"
+            class="sc-gsDKAQ dxFEtn"
+            data-testid="logo"
+            src="logo.png"
+          />
+        </a>
+      </header>
+      <div
+        class="sc-hKwDye VyKlp"
+      >
+        <div
+          class="socket"
+        >
+          <div
+            class="gel center-gel"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c1 r1"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c2 r1"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c3 r1"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c4 r1"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c5 r1"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c6 r1"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c7 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c8 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c9 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c10 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c11 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c12 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c13 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c14 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c15 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c16 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c17 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c18 r2"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c19 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c20 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c21 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c22 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c23 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c24 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c25 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c26 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c27 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c28 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c29 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c30 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c31 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c32 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c33 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c34 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c35 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c36 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+          <div
+            class="gel c37 r3"
+          >
+            <div
+              class="hex-brick h1"
+            />
+            <div
+              class="hex-brick h2"
+            />
+            <div
+              class="hex-brick h3"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`testing components testing login.jsx 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="sc-dkPtRN iHrXQq"
+      >
+        <header
+          class="sc-bdvvtL RYIYw"
+          data-testid="header"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="Synergy of Serra Logo"
+              class="sc-gsDKAQ dxFEtn"
+              data-testid="logo"
+              src="logo.png"
+            />
+          </a>
+        </header>
+        <article
+          class="sc-ieecCq xChtw"
+        >
+          <form
+            class="sc-hGPBjI cJgIpo"
+            data-testid="login-form"
+          >
+            <p
+              aria-live="assertive"
+              class="sc-fFeiMQ joWduG"
+              style="display: none;"
+            />
+            <h1
+              class="sc-iCfMLu hyvNBz"
+            >
+              login
+            </h1>
+            <section
+              class="sc-dJjYzT btqgGA"
+            >
+              <div>
+                <div
+                  style="width: 100%;"
+                >
+                  <label
+                    class="sc-furwcr kbSLfi"
+                    for="currentEmail"
+                  >
+                    E-Mail Address
+                  </label>
+                  <div
+                    class="sc-jrQzAO jJfcTo"
+                  >
+                    <img
+                      alt=""
+                      class="sc-pVTFL jWfSFM"
+                      src="mail.svg"
+                      type="email"
+                    />
+                    <input
+                      autocomplete="currentEmail"
+                      class="sc-kDTinF kZxqMQ"
+                      id="currentEmail"
+                      name="currentEmail"
+                      placeholder="E-Mail Address"
+                      required=""
+                      type="email"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  style="width: 100%;"
+                >
+                  <label
+                    class="sc-furwcr kbSLfi"
+                    for="currentPassword"
+                  >
+                    Password
+                  </label>
+                  <div
+                    class="sc-jrQzAO jJfcTo"
+                  >
+                    <img
+                      alt=""
+                      class="sc-pVTFL hMpKIx"
+                      src="lock.svg"
+                      type="password"
+                    />
+                    <input
+                      autocomplete="currentPassword"
+                      class="sc-kDTinF kZxqMQ"
+                      id="currentPassword"
+                      name="currentPassword"
+                      placeholder="Password"
+                      required=""
+                      type="password"
+                      value=""
+                    />
+                    <img
+                      alt="Show Password"
+                      class="sc-pVTFL hMpKIx"
+                      src="eye.svg"
+                      style="cursor: pointer;"
+                      type="show"
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <button
+              aria-label="Log In"
+              class="sc-jRQBWg kEggOY"
+              disabled=""
+              style="margin-block: 1rem;"
+              type="submit"
+            >
+              <h4
+                class="sc-gKclnd bLmbVV"
+              >
+                LOGIN
+              </h4>
+            </button>
+            <div
+              class="sc-fotOHu gEXKjI"
+            >
+              Don't have an account yet?
+              <a
+                href="/signup"
+              >
+                Sign up
+              </a>
+            </div>
+            <div
+              class="sc-fotOHu iOnKxs"
+            >
+              Don't Remember Your Password?
+              <a
+                href="/login"
+              >
+                Recover My Password
+              </a>
+            </div>
+          </form>
+          <a
+            href="/"
+          >
+            <div
+              class="sc-bkkeKt jocgIg"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z"
+                />
+              </svg>
+            </div>
+          </a>
+        </article>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="sc-dkPtRN iHrXQq"
+    >
+      <header
+        class="sc-bdvvtL RYIYw"
+        data-testid="header"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="Synergy of Serra Logo"
+            class="sc-gsDKAQ dxFEtn"
+            data-testid="logo"
+            src="logo.png"
+          />
+        </a>
+      </header>
+      <article
+        class="sc-ieecCq xChtw"
+      >
+        <form
+          class="sc-hGPBjI cJgIpo"
+          data-testid="login-form"
+        >
+          <p
+            aria-live="assertive"
+            class="sc-fFeiMQ joWduG"
+            style="display: none;"
+          />
+          <h1
+            class="sc-iCfMLu hyvNBz"
+          >
+            login
+          </h1>
+          <section
+            class="sc-dJjYzT btqgGA"
+          >
+            <div>
+              <div
+                style="width: 100%;"
+              >
+                <label
+                  class="sc-furwcr kbSLfi"
+                  for="currentEmail"
+                >
+                  E-Mail Address
+                </label>
+                <div
+                  class="sc-jrQzAO jJfcTo"
+                >
+                  <img
+                    alt=""
+                    class="sc-pVTFL jWfSFM"
+                    src="mail.svg"
+                    type="email"
+                  />
+                  <input
+                    autocomplete="currentEmail"
+                    class="sc-kDTinF kZxqMQ"
+                    id="currentEmail"
+                    name="currentEmail"
+                    placeholder="E-Mail Address"
+                    required=""
+                    type="email"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                style="width: 100%;"
+              >
+                <label
+                  class="sc-furwcr kbSLfi"
+                  for="currentPassword"
+                >
+                  Password
+                </label>
+                <div
+                  class="sc-jrQzAO jJfcTo"
+                >
+                  <img
+                    alt=""
+                    class="sc-pVTFL hMpKIx"
+                    src="lock.svg"
+                    type="password"
+                  />
+                  <input
+                    autocomplete="currentPassword"
+                    class="sc-kDTinF kZxqMQ"
+                    id="currentPassword"
+                    name="currentPassword"
+                    placeholder="Password"
+                    required=""
+                    type="password"
+                    value=""
+                  />
+                  <img
+                    alt="Show Password"
+                    class="sc-pVTFL hMpKIx"
+                    src="eye.svg"
+                    style="cursor: pointer;"
+                    type="show"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <button
+            aria-label="Log In"
+            class="sc-jRQBWg kEggOY"
+            disabled=""
+            style="margin-block: 1rem;"
+            type="submit"
+          >
+            <h4
+              class="sc-gKclnd bLmbVV"
+            >
+              LOGIN
+            </h4>
+          </button>
+          <div
+            class="sc-fotOHu gEXKjI"
+          >
+            Don't have an account yet?
+            <a
+              href="/signup"
+            >
+              Sign up
+            </a>
+          </div>
+          <div
+            class="sc-fotOHu iOnKxs"
+          >
+            Don't Remember Your Password?
+            <a
+              href="/login"
+            >
+              Recover My Password
+            </a>
+          </div>
+        </form>
+        <a
+          href="/"
+        >
+          <div
+            class="sc-bkkeKt jocgIg"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+              />
+              <path
+                d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z"
+              />
+            </svg>
+          </div>
+        </a>
+      </article>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`testing components testing signup.jsx 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="sc-dkPtRN iHrXQq"
+      >
+        <header
+          class="sc-bdvvtL RYIYw"
+          data-testid="header"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="Synergy of Serra Logo"
+              class="sc-gsDKAQ dxFEtn"
+              data-testid="logo"
+              src="logo.png"
+            />
+          </a>
+        </header>
+        <article
+          class="sc-ieecCq xChtw"
+        >
+          <form
+            class="sc-hGPBjI cJgIpo"
+            data-testid="signup-form"
+          >
+            <p
+              aria-live="assertive"
+              class="sc-fFeiMQ joWduG"
+              style="display: none;"
+            />
+            <h1
+              class="sc-iCfMLu hyvNBz"
+            >
+              signup
+            </h1>
+            <section
+              class="sc-dJjYzT btqgGA"
+            >
+              <div>
+                <div
+                  style="width: 100%;"
+                >
+                  <label
+                    class="sc-furwcr kbSLfi"
+                    for="username"
+                  >
+                    Username
+                  </label>
+                  <div
+                    class="sc-jrQzAO jJfcTo"
+                  >
+                    <img
+                      alt=""
+                      class="sc-pVTFL hMpKIx"
+                      src="user.svg"
+                      type="text"
+                    />
+                    <input
+                      aria-describedby="username-error-msg"
+                      aria-invalid="true"
+                      autocomplete="username"
+                      class="sc-kDTinF kZxqMQ"
+                      data-testid="username"
+                      id="username"
+                      name="username"
+                      placeholder="Username"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sc-ksdxgE iILnUO"
+                >
+                  <div
+                    aria-live="assertive"
+                    class="sc-hBUSln fuGatP"
+                    id="username-error-msg"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                      />
+                    </svg>
+                    Username is required and:
+                    <br />
+                    - Must be between 3 and 20 characters.
+                    <br />
+                    - Must begin with a letter.
+                    <br />
+                    - Letters, numbers, underscores, hyphens allowed.
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  style="width: 100%;"
+                >
+                  <label
+                    class="sc-furwcr kbSLfi"
+                    for="newEmail"
+                  >
+                    E-Mail Address
+                  </label>
+                  <div
+                    class="sc-jrQzAO jJfcTo"
+                  >
+                    <img
+                      alt=""
+                      class="sc-pVTFL jWfSFM"
+                      src="mail.svg"
+                      type="email"
+                    />
+                    <input
+                      aria-describedby="new-email-error-msg"
+                      aria-invalid="true"
+                      autocomplete="newEmail"
+                      class="sc-kDTinF kZxqMQ"
+                      data-testid="new-email"
+                      id="newEmail"
+                      name="newEmail"
+                      placeholder="E-Mail Address"
+                      required=""
+                      type="email"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sc-ksdxgE iILnUO"
+                >
+                  <div
+                    aria-live="assertive"
+                    class="sc-hBUSln fuGatP"
+                    id="new-email-error-msg"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                      />
+                    </svg>
+                    Email is required and must be a valid email address.
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  style="width: 100%;"
+                >
+                  <label
+                    class="sc-furwcr kbSLfi"
+                    for="newPassword"
+                  >
+                    Password
+                  </label>
+                  <div
+                    class="sc-jrQzAO jJfcTo"
+                  >
+                    <img
+                      alt=""
+                      class="sc-pVTFL hMpKIx"
+                      src="lock.svg"
+                      type="password"
+                    />
+                    <input
+                      aria-describedby="new-password-error-msg"
+                      aria-invalid="false"
+                      autocomplete="newPassword"
+                      class="sc-kDTinF kZxqMQ"
+                      data-testid="new-password"
+                      id="newPassword"
+                      name="newPassword"
+                      placeholder="Password"
+                      required=""
+                      type="password"
+                      value=""
+                    />
+                    <img
+                      alt="Show Password"
+                      class="sc-pVTFL hMpKIx"
+                      src="eye.svg"
+                      style="cursor: pointer;"
+                      type="show"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sc-ksdxgE iILnUO"
+                >
+                  <div
+                    aria-live="assertive"
+                    class="sc-hBUSln fuGatP"
+                    id="new-password-error-msg"
+                  >
+                    <div
+                      class="sc-iqseJM"
+                      id="pwdnote"
+                    >
+                      <p
+                        class="sc-crHmcD kUFPsc"
+                      >
+                        <svg
+                          class="sc-bqiRlB iNIYsm"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 352 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                          />
+                        </svg>
+                        The password must contain at least 8 characters.
+                      </p>
+                      <p
+                        class="sc-crHmcD kUFPsc"
+                      >
+                        <svg
+                          class="sc-bqiRlB iNIYsm"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 352 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                          />
+                        </svg>
+                        The password must contain at least 1 uppercase character.
+                      </p>
+                      <p
+                        class="sc-crHmcD kUFPsc"
+                      >
+                        <svg
+                          class="sc-bqiRlB iNIYsm"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 352 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                          />
+                        </svg>
+                        The password must contain at least 1 lowercase character.
+                      </p>
+                      <p
+                        class="sc-crHmcD kUFPsc"
+                      >
+                        <svg
+                          class="sc-bqiRlB iNIYsm"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 352 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                          />
+                        </svg>
+                        The password must contain at least 1 number.
+                      </p>
+                      <p
+                        class="sc-crHmcD kUFPsc"
+                      >
+                        <svg
+                          class="sc-bqiRlB iNIYsm"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 352 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                          />
+                        </svg>
+                        The password must contain at least 1 special character. Allowed special characters:
+                      </p>
+                      <p
+                        class="sc-crHmcD kUFPsc"
+                      >
+                        <svg
+                          class="sc-egiyK WVaTc"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          stroke-width="0"
+                          viewBox="0 0 512 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                          />
+                        </svg>
+                        The password must not contain any spaces.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  style="width: 100%;"
+                >
+                  <label
+                    class="sc-furwcr kbSLfi"
+                    for="confirmPassword"
+                  >
+                    Confirm Password
+                  </label>
+                  <div
+                    class="sc-jrQzAO jJfcTo"
+                  >
+                    <img
+                      alt=""
+                      class="sc-pVTFL hMpKIx"
+                      src="lock.svg"
+                      type="password"
+                    />
+                    <input
+                      aria-describedby="confirm-password-error-msg"
+                      aria-invalid="true"
+                      autocomplete="confirmPassword"
+                      class="sc-kDTinF kZxqMQ"
+                      data-testid="confirm-password"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      placeholder="Confirm Password"
+                      required=""
+                      type="password"
+                      value=""
+                    />
+                    <img
+                      alt="Show Password"
+                      class="sc-pVTFL hMpKIx"
+                      src="eye.svg"
+                      style="cursor: pointer;"
+                      type="show"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="sc-ksdxgE iILnUO"
+                >
+                  <div
+                    aria-live="assertive"
+                    class="sc-hBUSln fuGatP"
+                    id="confirm-password-error-msg"
+                  >
+                    <svg
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      stroke-width="0"
+                      viewBox="0 0 512 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                      />
+                    </svg>
+                    Must match the first password input field.
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              style="margin-block: 0.9rem;"
+            >
+              <div
+                class="sc-kfPuZi gSZwoE"
+              >
+                <input
+                  id="newsLetter"
+                  name="newsLetter"
+                  type="checkbox"
+                />
+                <label
+                  for="newsLetter"
+                >
+                  <div
+                    class="sc-fotOHu gEXKjI"
+                  >
+                    I want to receive news about Synergy of Serra
+                    
+                  </div>
+                </label>
+              </div>
+              <div
+                class="sc-kfPuZi gSZwoE"
+              >
+                <input
+                  data-testid="terms"
+                  id="terms"
+                  name="terms"
+                  type="checkbox"
+                />
+                <label
+                  for="terms"
+                >
+                  <div
+                    class="sc-fotOHu gEXKjI"
+                  >
+                    I read and agree to the
+                    <a
+                      href="/signup"
+                    >
+                      Terms of Service
+                    </a>
+                  </div>
+                </label>
+              </div>
+            </section>
+            <button
+              aria-label="Sign Up"
+              class="sc-jRQBWg kEggOY"
+              disabled=""
+              type="submit"
+            >
+              <h4
+                class="sc-gKclnd bLmbVV"
+              >
+                Signup
+              </h4>
+            </button>
+            <div
+              class="sc-fotOHu gEXKjI"
+            >
+              Already Have an Account?
+              <a
+                href="/login"
+              >
+                Login
+              </a>
+            </div>
+          </form>
+          <a
+            href="/"
+          >
+            <div
+              class="sc-bkkeKt jocgIg"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 1024 1024"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                />
+                <path
+                  d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z"
+                />
+              </svg>
+            </div>
+          </a>
+        </article>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="sc-dkPtRN iHrXQq"
+    >
+      <header
+        class="sc-bdvvtL RYIYw"
+        data-testid="header"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="Synergy of Serra Logo"
+            class="sc-gsDKAQ dxFEtn"
+            data-testid="logo"
+            src="logo.png"
+          />
+        </a>
+      </header>
+      <article
+        class="sc-ieecCq xChtw"
+      >
+        <form
+          class="sc-hGPBjI cJgIpo"
+          data-testid="signup-form"
+        >
+          <p
+            aria-live="assertive"
+            class="sc-fFeiMQ joWduG"
+            style="display: none;"
+          />
+          <h1
+            class="sc-iCfMLu hyvNBz"
+          >
+            signup
+          </h1>
+          <section
+            class="sc-dJjYzT btqgGA"
+          >
+            <div>
+              <div
+                style="width: 100%;"
+              >
+                <label
+                  class="sc-furwcr kbSLfi"
+                  for="username"
+                >
+                  Username
+                </label>
+                <div
+                  class="sc-jrQzAO jJfcTo"
+                >
+                  <img
+                    alt=""
+                    class="sc-pVTFL hMpKIx"
+                    src="user.svg"
+                    type="text"
+                  />
+                  <input
+                    aria-describedby="username-error-msg"
+                    aria-invalid="true"
+                    autocomplete="username"
+                    class="sc-kDTinF kZxqMQ"
+                    data-testid="username"
+                    id="username"
+                    name="username"
+                    placeholder="Username"
+                    required=""
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="sc-ksdxgE iILnUO"
+              >
+                <div
+                  aria-live="assertive"
+                  class="sc-hBUSln fuGatP"
+                  id="username-error-msg"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                    />
+                  </svg>
+                  Username is required and:
+                  <br />
+                  - Must be between 3 and 20 characters.
+                  <br />
+                  - Must begin with a letter.
+                  <br />
+                  - Letters, numbers, underscores, hyphens allowed.
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                style="width: 100%;"
+              >
+                <label
+                  class="sc-furwcr kbSLfi"
+                  for="newEmail"
+                >
+                  E-Mail Address
+                </label>
+                <div
+                  class="sc-jrQzAO jJfcTo"
+                >
+                  <img
+                    alt=""
+                    class="sc-pVTFL jWfSFM"
+                    src="mail.svg"
+                    type="email"
+                  />
+                  <input
+                    aria-describedby="new-email-error-msg"
+                    aria-invalid="true"
+                    autocomplete="newEmail"
+                    class="sc-kDTinF kZxqMQ"
+                    data-testid="new-email"
+                    id="newEmail"
+                    name="newEmail"
+                    placeholder="E-Mail Address"
+                    required=""
+                    type="email"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="sc-ksdxgE iILnUO"
+              >
+                <div
+                  aria-live="assertive"
+                  class="sc-hBUSln fuGatP"
+                  id="new-email-error-msg"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                    />
+                  </svg>
+                  Email is required and must be a valid email address.
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                style="width: 100%;"
+              >
+                <label
+                  class="sc-furwcr kbSLfi"
+                  for="newPassword"
+                >
+                  Password
+                </label>
+                <div
+                  class="sc-jrQzAO jJfcTo"
+                >
+                  <img
+                    alt=""
+                    class="sc-pVTFL hMpKIx"
+                    src="lock.svg"
+                    type="password"
+                  />
+                  <input
+                    aria-describedby="new-password-error-msg"
+                    aria-invalid="false"
+                    autocomplete="newPassword"
+                    class="sc-kDTinF kZxqMQ"
+                    data-testid="new-password"
+                    id="newPassword"
+                    name="newPassword"
+                    placeholder="Password"
+                    required=""
+                    type="password"
+                    value=""
+                  />
+                  <img
+                    alt="Show Password"
+                    class="sc-pVTFL hMpKIx"
+                    src="eye.svg"
+                    style="cursor: pointer;"
+                    type="show"
+                  />
+                </div>
+              </div>
+              <div
+                class="sc-ksdxgE iILnUO"
+              >
+                <div
+                  aria-live="assertive"
+                  class="sc-hBUSln fuGatP"
+                  id="new-password-error-msg"
+                >
+                  <div
+                    class="sc-iqseJM"
+                    id="pwdnote"
+                  >
+                    <p
+                      class="sc-crHmcD kUFPsc"
+                    >
+                      <svg
+                        class="sc-bqiRlB iNIYsm"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 352 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                        />
+                      </svg>
+                      The password must contain at least 8 characters.
+                    </p>
+                    <p
+                      class="sc-crHmcD kUFPsc"
+                    >
+                      <svg
+                        class="sc-bqiRlB iNIYsm"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 352 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                        />
+                      </svg>
+                      The password must contain at least 1 uppercase character.
+                    </p>
+                    <p
+                      class="sc-crHmcD kUFPsc"
+                    >
+                      <svg
+                        class="sc-bqiRlB iNIYsm"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 352 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                        />
+                      </svg>
+                      The password must contain at least 1 lowercase character.
+                    </p>
+                    <p
+                      class="sc-crHmcD kUFPsc"
+                    >
+                      <svg
+                        class="sc-bqiRlB iNIYsm"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 352 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                        />
+                      </svg>
+                      The password must contain at least 1 number.
+                    </p>
+                    <p
+                      class="sc-crHmcD kUFPsc"
+                    >
+                      <svg
+                        class="sc-bqiRlB iNIYsm"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 352 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                        />
+                      </svg>
+                      The password must contain at least 1 special character. Allowed special characters:
+                    </p>
+                    <p
+                      class="sc-crHmcD kUFPsc"
+                    >
+                      <svg
+                        class="sc-egiyK WVaTc"
+                        fill="currentColor"
+                        height="1em"
+                        stroke="currentColor"
+                        stroke-width="0"
+                        viewBox="0 0 512 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                        />
+                      </svg>
+                      The password must not contain any spaces.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                style="width: 100%;"
+              >
+                <label
+                  class="sc-furwcr kbSLfi"
+                  for="confirmPassword"
+                >
+                  Confirm Password
+                </label>
+                <div
+                  class="sc-jrQzAO jJfcTo"
+                >
+                  <img
+                    alt=""
+                    class="sc-pVTFL hMpKIx"
+                    src="lock.svg"
+                    type="password"
+                  />
+                  <input
+                    aria-describedby="confirm-password-error-msg"
+                    aria-invalid="true"
+                    autocomplete="confirmPassword"
+                    class="sc-kDTinF kZxqMQ"
+                    data-testid="confirm-password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm Password"
+                    required=""
+                    type="password"
+                    value=""
+                  />
+                  <img
+                    alt="Show Password"
+                    class="sc-pVTFL hMpKIx"
+                    src="eye.svg"
+                    style="cursor: pointer;"
+                    type="show"
+                  />
+                </div>
+              </div>
+              <div
+                class="sc-ksdxgE iILnUO"
+              >
+                <div
+                  aria-live="assertive"
+                  class="sc-hBUSln fuGatP"
+                  id="confirm-password-error-msg"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                    />
+                  </svg>
+                  Must match the first password input field.
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            style="margin-block: 0.9rem;"
+          >
+            <div
+              class="sc-kfPuZi gSZwoE"
+            >
+              <input
+                id="newsLetter"
+                name="newsLetter"
+                type="checkbox"
+              />
+              <label
+                for="newsLetter"
+              >
+                <div
+                  class="sc-fotOHu gEXKjI"
+                >
+                  I want to receive news about Synergy of Serra
+                  
+                </div>
+              </label>
+            </div>
+            <div
+              class="sc-kfPuZi gSZwoE"
+            >
+              <input
+                data-testid="terms"
+                id="terms"
+                name="terms"
+                type="checkbox"
+              />
+              <label
+                for="terms"
+              >
+                <div
+                  class="sc-fotOHu gEXKjI"
+                >
+                  I read and agree to the
+                  <a
+                    href="/signup"
+                  >
+                    Terms of Service
+                  </a>
+                </div>
+              </label>
+            </div>
+          </section>
+          <button
+            aria-label="Sign Up"
+            class="sc-jRQBWg kEggOY"
+            disabled=""
+            type="submit"
+          >
+            <h4
+              class="sc-gKclnd bLmbVV"
+            >
+              Signup
+            </h4>
+          </button>
+          <div
+            class="sc-fotOHu gEXKjI"
+          >
+            Already Have an Account?
+            <a
+              href="/login"
+            >
+              Login
+            </a>
+          </div>
+        </form>
+        <a
+          href="/"
+        >
+          <div
+            class="sc-bkkeKt jocgIg"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+              />
+              <path
+                d="M623.6 316.7C593.6 290.4 554 276 512 276s-81.6 14.5-111.6 40.7C369.2 344 352 380.7 352 420v7.6c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V420c0-44.1 43.1-80 96-80s96 35.9 96 80c0 31.1-22 59.6-56.1 72.7-21.2 8.1-39.2 22.3-52.1 40.9-13.1 19-19.9 41.8-19.9 64.9V620c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-22.7a48.3 48.3 0 0 1 30.9-44.8c59-22.7 97.1-74.7 97.1-132.5.1-39.3-17.1-76-48.3-103.3zM472 732a40 40 0 1 0 80 0 40 40 0 1 0-80 0z"
+              />
+            </svg>
+          </div>
+        </a>
+      </article>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

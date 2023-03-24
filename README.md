@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+[![](https://img.shields.io/static/v1?label=BY&message=RAMOUN&color=birghtgreen)](https://ramoun.me)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/-React-1f1f1f?logo=react&logoColor=61DAFB&style=for-the-badge)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![Styled-Components](https://img.shields.io/badge/Styled_Components-fbfbfb?style=for-the-badge&logo=styled-components&logoColor=DB7093)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-## Available Scripts
+# Synergy Of Serra
 
-In the project directory, you can run:
+> A "FAN-MADE" Prototype for the Signup & Login of the new outstanding NFT TCG **"Synergy Of Serra"**. You can visit the original website on [this link](https://synergyofserra.com/) (thank me later).
 
-### `npm start`
+## A Screenshot of the Homepage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![screenshot](screenshots/screenshot.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Collective Screenshots of the Mobile Version
 
-### `npm test`
+<p align="center" justify="center">
+  <img width="180px" height="320px" src="screenshots/login.png" />
+  <img width="180px" height="320px" src="screenshots/signup.png" />
+  <img width="180px" height="320px" src="screenshots/logout.png" />
+  <img width="180px" height="320px" src="screenshots/loading.gif" />
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## A Demo for the App
 
-### `npm run build`
+- [Demo](https://serra.omarramoun.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Languages: _**HTML5/Semantics, CSS3/SASS, JS/ES6**_
+- Framework: _**React, Redux, Styled-Components, React-Router**_
+- Technologies used: _**GIT, GITHUB, LINTERS**_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Life Cycle
 
-### `npm run eject`
+0. tools and dependencies
+1. UI Architecture
+2. Component structure & organization
+3. Logic & state management
+4. Style + (Responsive)
+5. Accessibility
+6. Testing
+7. Documentation
+8. Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Authors
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👤 **Ramoun**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **GitHub**: [![@omarramoun](https://img.shields.io/github/followers/omarramoun?label=OmarRamoun&style=social)](https://github.com/omarramoun)
+- **Twitter**: [![@omarramoun](https://img.shields.io/twitter/follow/omarramoun?label=OmarRamoun&style=social)](https://twitter.com/omarramoun)
+- **LinkdIn**: [![@omarramoun](https://img.shields.io/github/followers/omarramoun?label=OmarRamoun&logo=linkedin&style=social)](https://www.linkedin.com/in/omarramoun/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🤝 Contributing
 
-## Learn More
+Contributions, issues, and feature requests are welcome!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to check the [issues page](../../issues).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Show your support
 
-### Code Splitting
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgments
 
-### Analyzing the Bundle Size
+- The team behind Synergey Of Serra (Great Guys)
+- My Passion For Computers & TCG
+- [M3O](http://m3o.com/) for their great API.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Special Thanks to Julian
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Really thank you for this great game

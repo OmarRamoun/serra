@@ -1,17 +1,32 @@
 {
   "name": "synergy-of-serra",
-  "version": "0.1.0",
+  "homepage": "https://omarramoun.github.io",
+  "version": "0.6.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.0",
+    "@testing-library/cypress": "^8.0.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.1",
+    "cypress": "^9.5.2",
+    "firebase-tools": "^10.4.2",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "redux": "^4.1.2",
+    "styled-components": "^5.3.3",
+    "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -34,5 +49,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "gh-pages": "^3.2.3",
+    "react-dom-visualizer": "^1.0.0"
   }
 }
